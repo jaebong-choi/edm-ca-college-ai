@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>edm유학센터 - 캐나다 공립 컬리지 진학 AI 컨설팅 (커리어·편입)</title>
-    <meta name="description" content="캐나다 컬리지 유학, 전공이 취업허가(PGWP)를 결정합니다. 전공·지역·예산을 분석해 취업·이민까지 이어지는 진학 경로를 3분 만에 진단합니다. edm유학센터 캐나다 유학 전문 컨설팅.">
+    <meta name="description" content="캐나다 컬리지 유학, 전공이 취업허가(PGWP)를 결정합니다. 전공·지역·영어 준비 상황을 분석해 취업·이민까지 이어지는 진학 경로를 3분 만에 진단합니다. edm유학센터 캐나다 유학 전문 컨설팅.">
 
     <!-- Open Graph (카카오톡/페이스북 링크 미리보기) -->
     <meta property="og:type" content="website">
@@ -415,14 +415,14 @@
 
                 <!-- 고교 졸업 전: 국제 사립학교 경로 (편입 트랙 + 고3·고졸에서만 표시) -->
                 <div id="hs-private-card" class="hidden apple-card-flat max-w-4xl mx-auto mt-6 border border-gray-200" style="border-radius:12px;">
-                    <span class="region-badge mb-4"><i class="fa-solid fa-school"></i> 고교 졸업 전 추가 옵션</span>
+                    <span class="region-badge mb-4"><i class="fa-solid fa-school"></i> 중·고교 재학 ~ 고교 졸업 전 추가 옵션</span>
                     <h4 class="sf-display-card-bold text-[#1d1d1f] mb-3">국제 사립학교 → 대학 직행 경로</h4>
                     <p class="sf-text-caption text-gray-600 mb-5">
-                        고교 졸업 전(고3 포함)이라면 컬리지 편입 외에, 토론토의 국제 사립학교(BICC·TAIE·UMC 하이스쿨 등)에서
+                        중·고등학교 재학 중이거나 고교 졸업 전(고3 포함)이라면 컬리지 편입 외에, 토론토의 국제 사립학교(BICC·TAIE·UMC 하이스쿨 등)에서
                         온타리오 고교 졸업장(OSSD)을 취득한 뒤 캐나다 대학에 바로 지원하는 경로도 선택할 수 있습니다.
                     </p>
                     <ol class="sf-text-caption text-gray-600 space-y-2 mb-5">
-                        <li class="flex items-start"><span class="shrink-0 w-5 h-5 rounded-full bg-[#6CB640] text-white text-[11px] font-bold flex items-center justify-center mr-2 mt-0.5">1</span><span>국제 사립학교 12학년 편입 (통상 1년 내외, 입학 시기 유연)</span></li>
+                        <li class="flex items-start"><span class="shrink-0 w-5 h-5 rounded-full bg-[#6CB640] text-white text-[11px] font-bold flex items-center justify-center mr-2 mt-0.5">1</span><span>국제 사립학교 편입 (중·고 재학생은 학년에 맞춰, 고3·고졸은 12학년으로 — 입학 시기 유연)</span></li>
                         <li class="flex items-start"><span class="shrink-0 w-5 h-5 rounded-full bg-[#6CB640] text-white text-[11px] font-bold flex items-center justify-center mr-2 mt-0.5">2</span><span>온타리오 고교 졸업장(OSSD) 취득 — 12학년 내신(Top 6 과목)으로 대학 지원</span></li>
                         <li class="flex items-start"><span class="shrink-0 w-5 h-5 rounded-full bg-[#6CB640] text-white text-[11px] font-bold flex items-center justify-center mr-2 mt-0.5">3</span><span>토론토대·UBC 등 대학 1학년 직행 → 학위 취득 시 PGWP 전공 제한 없음</span></li>
                     </ol>
@@ -842,21 +842,12 @@
                     { label: "상관없음", val: "any" }
                 ]
             },
-            "a_budget": {
-                question: "연간 예산(학비+생활비)은 어느 정도인가요?",
-                key: "budget",
-                options: [
-                    { label: "3천만 원 이하", val: "low" },
-                    { label: "3천만~5천만 원", val: "mid" },
-                    { label: "5천만 원 이상", val: "high" }
-                ]
-            },
             "a_english": {
-                question: "공인 영어 성적(IELTS 기준)은 어느 정도인가요?",
+                question: "공인 영어 성적(IELTS 등)을 보유하고 계신가요?",
                 key: "english",
                 options: [
-                    { label: "IELTS 6.0 이상", val: "ok" },
-                    { label: "IELTS 5.5 수준", val: "mid" },
+                    { label: "있어요 — IELTS 6.0 이상", val: "ok" },
+                    { label: "있어요 — IELTS 5.5 이하", val: "mid" },
                     { label: "아직 없어요", val: "none" }
                 ]
             },
@@ -864,6 +855,7 @@
                 question: "현재 상태를 알려주세요.",
                 key: "status",
                 options: [
+                    { label: "중·고등학교 재학 중", val: "secondary" },
                     { label: "고3 · 고교 졸업", val: "hs" },
                     { label: "대학 재학·휴학 중", val: "uni_current" },
                     { label: "대학 졸업", val: "uni_grad" }
@@ -889,24 +881,24 @@
                     { label: "아직 미정이에요", val: "undecided" }
                 ]
             },
-            "b_budget": {
-                question: "연간 예산(학비+생활비)은 어느 정도인가요?",
-                key: "budget",
+            "b_english": {
+                question: "공인 영어 성적(IELTS 등)을 보유하고 계신가요?",
+                key: "english",
                 options: [
-                    { label: "3천만 원 이하", val: "low" },
-                    { label: "3천만~5천만 원", val: "mid" },
-                    { label: "5천만 원 이상", val: "high" }
+                    { label: "있어요 — IELTS 6.0 이상", val: "ok" },
+                    { label: "있어요 — IELTS 5.5 이하", val: "mid" },
+                    { label: "아직 없어요", val: "none" }
                 ]
             }
         };
 
         const flows = {
-            career: { steps: ["a_status", "a_goal", "a_major", "a_env", "a_budget", "a_english"], chip: '<i class="fa-solid fa-briefcase"></i> 커리어·이민 트랙' },
-            transfer: { steps: ["b_status", "b_region", "b_field", "b_budget"], chip: '<i class="fa-solid fa-graduation-cap"></i> 대학 편입 트랙' }
+            career: { steps: ["a_status", "a_goal", "a_major", "a_env", "a_english"], chip: '<i class="fa-solid fa-briefcase"></i> 커리어·이민 트랙' },
+            transfer: { steps: ["b_status", "b_region", "b_field", "b_english"], chip: '<i class="fa-solid fa-graduation-cap"></i> 대학 편입 트랙' }
         };
 
         function emptyProfile(track) {
-            return { track: track, status: "", goal: "", majorCat: "", env: "", budget: "", english: "", bRegion: "", bField: "" };
+            return { track: track, status: "", goal: "", majorCat: "", env: "", english: "", bRegion: "", bField: "" };
         }
 
         function labelOf(stepId, val) {
@@ -1083,9 +1075,6 @@
             if (p.env === "metro") { score.ontario += 2; score.bc += 2; }
             if (p.env === "settle_friendly") { score.prairies += 2; score.atlantic += 2; score.alberta += 1; }
 
-            if (p.budget === "low") { score.atlantic += 2; score.prairies += 2; score.ontario -= 1; score.bc -= 2; }
-            if (p.budget === "high") { score.ontario += 1; score.bc += 1; }
-
             if (majorId === "trades" || majorId === "culinary") { score.alberta += 2; }
             if (majorId === "it") { score.ontario += 1; score.bc += 1; }
             if (majorId === "agriculture") { score.alberta += 2; }
@@ -1150,10 +1139,6 @@
                 picks = [byName("bc", "Langara"), byName("bc", "Douglas"), byName("bc", "Camosun")];
             }
             picks = picks.filter(Boolean);
-            if (p.budget === "low") {
-                const alt = byName("atlantic", "College of the North Atlantic");
-                if (alt) { alt._badge = "학비 절약 대안"; picks.push(alt); }
-            }
             return picks;
         }
 
@@ -1275,7 +1260,6 @@
                 ["Goal", labelOf("a_goal", p.goal)],
                 ["Major", p.majorCat === "unsure" ? "미정 → " + major.name_ko : major.name_ko],
                 ["Region", labelOf("a_env", p.env)],
-                ["Budget", labelOf("a_budget", p.budget)],
                 ["English", labelOf("a_english", p.english)]
             ]);
 
@@ -1347,14 +1331,19 @@
                 ? "BC주는 컬리지 학점이 대학으로 그대로 인정되는 BC 트랜스퍼 시스템이 제도화되어 있습니다. Langara·Douglas 등 편입 특화 컬리지에서 2년을 이수하면 UBC·SFU 등 명문대 3학년 편입에 도전할 수 있습니다."
                 : "온타리오는 Seneca·Humber·Sheridan 등 대학 학위·편입 협정을 갖춘 컬리지가 많습니다. 컬리지 2년 후 토론토대 등으로의 편입 또는 컬리지 학사 과정으로 학위까지 이어갈 수 있습니다.";
             desc += " 무엇보다 편입·학위 과정은 전공 제한 없이 취업허가(PGWP)가 가능합니다.";
-            if (p.english) desc += "";
+            if (p.status === "secondary") {
+                desc = "중·고등학교 재학 중이라면 컬리지 편입에 앞서, 국제 사립학교에서 온타리오 고교 졸업장(OSSD)을 취득해 대학에 직행하는 경로를 최우선으로 검토할 수 있습니다. " + desc;
+            }
+            if (p.english === "none" || p.english === "mid") {
+                desc += " 영어 성적이 아직 부족해도 조건부 입학과 어학연수·패스웨이 병행으로 시작할 수 있습니다.";
+            }
             document.getElementById('result-pathway-desc').innerText = desc;
 
             renderSummary([
                 ["Status", labelOf("b_status", p.status)],
                 ["Target", labelOf("b_region", p.bRegion)],
                 ["Field", labelOf("b_field", p.bField)],
-                ["Budget", labelOf("b_budget", p.budget)]
+                ["English", labelOf("b_english", p.english)]
             ]);
 
             // Major card: 편입 트랙 안내
@@ -1374,8 +1363,8 @@
             noteEl.classList.remove('hidden');
             document.getElementById('rec-warning').classList.add('hidden');
 
-            // 고3·고교 졸업이면 국제 사립학교 → 대학 직행 경로도 함께 안내
-            document.getElementById('hs-private-card').classList.toggle('hidden', p.status !== "hs");
+            // 중·고 재학 또는 고3·고교 졸업이면 국제 사립학교 → 대학 직행 경로도 함께 안내
+            document.getElementById('hs-private-card').classList.toggle('hidden', p.status !== "hs" && p.status !== "secondary");
 
             renderPathwayGuide("transfer");
 
