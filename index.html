@@ -448,19 +448,21 @@
                 </p>
             </div>
 
-            <h3 class="sf-display-section text-center mb-4">Recommended Colleges</h3>
-            <p id="region-note" class="sf-text-caption text-gray-500 text-center mb-12 hidden"></p>
+            <div id="colleges-section">
+                <h3 class="sf-display-section text-center mb-4">Recommended Colleges</h3>
+                <p id="region-note" class="sf-text-caption text-gray-500 text-center mb-12 hidden"></p>
 
-            <!-- Colleges Grid -->
-            <div id="university-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4 mt-8">
-                <!-- College Cards Injected Here -->
+                <!-- Colleges Grid -->
+                <div id="university-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4 mt-8">
+                    <!-- College Cards Injected Here -->
+                </div>
+                <p class="sf-text-caption text-gray-400 text-center mb-4">
+                    ※ 학비는 각 컬리지의 <strong class="text-gray-500">공식 국제학생 학비 확정 후 반영 예정</strong>이며, 현재는 상담 시 안내해 드립니다.
+                </p>
+                <p class="sf-text-caption text-gray-400 text-center mb-24">
+                    ※ 본 안내는 2026년 IRCC 발표 기준이며 정책은 변동될 수 있습니다. 결과는 안내용이며, 프로그램별 최종 적격 여부(CIP 코드)와 최신 학비는 상담 시 확인해 드립니다.
+                </p>
             </div>
-            <p class="sf-text-caption text-gray-400 text-center mb-4">
-                ※ 학비는 각 컬리지의 <strong class="text-gray-500">공식 국제학생 학비 확정 후 반영 예정</strong>이며, 현재는 상담 시 안내해 드립니다.
-            </p>
-            <p class="sf-text-caption text-gray-400 text-center mb-24">
-                ※ 본 안내는 2026년 IRCC 발표 기준이며 정책은 변동될 수 있습니다. 결과는 안내용이며, 프로그램별 최종 적격 여부(CIP 코드)와 최신 학비는 상담 시 확인해 드립니다.
-            </p>
 
             <!-- edm 실적 -->
             <div class="mb-24">
@@ -1305,6 +1307,7 @@
 
             // 국제 사립학교 카드는 편입 트랙 전용
             document.getElementById('hs-private-card').classList.add('hidden');
+            document.getElementById('colleges-section').classList.remove('hidden');
 
             // Pathway Guide
             renderPathwayGuide(routeKey);
@@ -1321,9 +1324,13 @@
             renderCommonBlocks(major.name_ko, isPostgrad ? "포스트그래듀에이트" : "디플로마");
         }
 
-        // ---------- 트랙 B: 대학 편입 ----------
+        // ---------- 트랙 B: 대학 편입 / 대학 직행(중·고 재학) ----------
         function generateTransferReport() {
             const p = userProfile;
+            if (p.status === "secondary") {
+                generateOssdReport();
+                return;
+            }
             const isBC = p.bRegion !== "ontario";
 
             document.getElementById('result-pathway-title').innerText = "컬리지 → 대학 편입 경로 (2+2)";
@@ -1331,9 +1338,6 @@
                 ? "BC주는 컬리지 학점이 대학으로 그대로 인정되는 BC 트랜스퍼 시스템이 제도화되어 있습니다. Langara·Douglas 등 편입 특화 컬리지에서 2년을 이수하면 UBC·SFU 등 명문대 3학년 편입에 도전할 수 있습니다."
                 : "온타리오는 Seneca·Humber·Sheridan 등 대학 학위·편입 협정을 갖춘 컬리지가 많습니다. 컬리지 2년 후 토론토대 등으로의 편입 또는 컬리지 학사 과정으로 학위까지 이어갈 수 있습니다.";
             desc += " 무엇보다 편입·학위 과정은 전공 제한 없이 취업허가(PGWP)가 가능합니다.";
-            if (p.status === "secondary") {
-                desc = "중·고등학교 재학 중이라면 컬리지 편입에 앞서, 국제 사립학교에서 온타리오 고교 졸업장(OSSD)을 취득해 대학에 직행하는 경로를 최우선으로 검토할 수 있습니다. " + desc;
-            }
             if (p.english === "none" || p.english === "mid") {
                 desc += " 영어 성적이 아직 부족해도 조건부 입학과 어학연수·패스웨이 병행으로 시작할 수 있습니다.";
             }
@@ -1363,8 +1367,9 @@
             noteEl.classList.remove('hidden');
             document.getElementById('rec-warning').classList.add('hidden');
 
-            // 중·고 재학 또는 고3·고교 졸업이면 국제 사립학교 → 대학 직행 경로도 함께 안내
-            document.getElementById('hs-private-card').classList.toggle('hidden', p.status !== "hs" && p.status !== "secondary");
+            // 고3·고교 졸업이면 국제 사립학교 → 대학 직행 경로도 함께 안내
+            document.getElementById('hs-private-card').classList.toggle('hidden', p.status !== "hs");
+            document.getElementById('colleges-section').classList.remove('hidden');
 
             renderPathwayGuide("transfer");
 
@@ -1377,6 +1382,52 @@
             document.getElementById('university-grid').innerHTML = pickTransferColleges(p).map(collegeCard).join('');
 
             renderCommonBlocks("대학 편입", "편입");
+        }
+
+        // ---------- 트랙 B (중·고 재학): 국제 사립학교 → OSSD → 대학 직행 ----------
+        function generateOssdReport() {
+            const p = userProfile;
+
+            document.getElementById('result-pathway-title').innerText = "국제 사립학교 → 대학 직행 경로 (OSSD)";
+            let desc = "중·고등학교 재학 중이라면 컬리지를 거치지 않고, 토론토의 국제 사립학교(BICC·TAIE·UMC 하이스쿨 등)에서 온타리오 고교 졸업장(OSSD)을 취득해 캐나다 대학 1학년으로 바로 진학하는 경로를 추천합니다. 12학년 내신(Top 6 과목)으로 토론토대·UBC 등 명문대에 지원하며, 학사 학위 취득 시 전공 제한 없이 취업허가(PGWP)가 가능합니다.";
+            if (p.english === "none" || p.english === "mid") {
+                desc += " 영어는 사립학교의 ESL 과정과 병행해 준비할 수 있어, 지금 공인 성적이 없어도 시작할 수 있습니다.";
+            }
+            document.getElementById('result-pathway-desc').innerText = desc;
+
+            renderSummary([
+                ["Status", labelOf("b_status", p.status)],
+                ["Target", labelOf("b_region", p.bRegion)],
+                ["Field", labelOf("b_field", p.bField)],
+                ["English", labelOf("b_english", p.english)]
+            ]);
+
+            // Major card: 대학 직행 안내
+            document.getElementById('rec-major-badge').innerHTML =
+                '<span class="region-badge"><i class="fa-solid fa-circle-check"></i> PGWP 가능 (학위 취득 시 전공 제한 없음)</span>';
+            const fieldLabel = labelOf("b_field", p.bField);
+            document.getElementById('rec-major-title').innerText =
+                (p.bField === "undecided" ? "전공 탐색형" : fieldLabel) + " · 대학 직행 트랙";
+            document.getElementById('rec-major-desc').innerText =
+                "국제 사립학교에서 " + (p.bField === "undecided" ? "적성에 맞는 12학년 과목을 탐색하며" : fieldLabel + " 관련 12학년 과목을 이수하며")
+                + " 온타리오 고교 졸업장(OSSD)을 취득하고, 12학년 내신으로 캐나다 대학 1학년에 직행 지원하는 경로입니다. 컬리지 편입 없이 대학으로 바로 이어지며, 학위 취득 시 전공과 무관하게 취업허가(PGWP)를 받을 수 있습니다.";
+            document.getElementById('rec-major-programs').innerHTML = [
+                "OSSD (온타리오 고교 졸업장)", "ESL + 12학년 정규 과목", "대학 1학년 직행 지원"
+            ].map(e => `<span class="track-chip"><i class="fa-solid fa-book-open"></i> ${e}</span>`).join('');
+            const noteEl = document.getElementById('rec-major-note');
+            noteEl.innerText = "※ 학교별 입학 시기·학비·기숙사는 상담 시 안내해 드립니다. 대학별 영어 요건(IELTS 등)은 별도 충족이 필요합니다.";
+            noteEl.classList.remove('hidden');
+            document.getElementById('rec-warning').classList.add('hidden');
+
+            // 국제 사립학교 상세 카드가 곧 추천 경로
+            document.getElementById('hs-private-card').classList.remove('hidden');
+
+            // 컬리지 추천 섹션은 대학 직행 경로와 무관하므로 숨김
+            document.getElementById('colleges-section').classList.add('hidden');
+
+            renderPathwayGuide("ossd"); // 3개 컬리지 경로는 참고용 — 하이라이트 없음
+
+            renderCommonBlocks("국제 사립학교", "대학 직행");
         }
 
         // ---------- 공통 블록 (Resource Center / Next Steps) ----------
