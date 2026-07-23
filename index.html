@@ -1097,30 +1097,51 @@
             langCost:      { id: "b3Y2U2WPdaI", t: "캐나다 어학연수 비용? 학비·생활비·숙소비·절약 팁 2분 요약" }
         };
 
-        function videoCard(v) {
-            return `
-                <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener"
-                   class="apple-card-flat border border-gray-200 overflow-hidden group block" style="border-radius:12px;padding:0;">
-                    <div class="relative">
-                        <img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="${v.t}" class="w-full h-44 object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/'+'${v.id}'+'/hqdefault.jpg'">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition">
-                            <i class="fa-brands fa-youtube text-5xl text-red-600 drop-shadow"></i>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <p class="sf-text-caption text-[#1d1d1f] font-semibold" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">${v.t}</p>
-                        <p class="text-xs text-gray-400 mt-2"><i class="fa-brands fa-youtube text-red-500 mr-1"></i> 유학티비 · edm유학센터</p>
-                    </div>
-                </a>`;
+        // DOM 직접 생성 (일부 렌더러가 innerHTML 주입 img를 로드하지 않는 문제 회피)
+        function videoCardEl(v) {
+            const a = document.createElement('a');
+            a.href = "https://www.youtube.com/watch?v=" + v.id;
+            a.target = "_blank"; a.rel = "noopener";
+            a.className = "apple-card-flat border border-gray-200 overflow-hidden group block";
+            a.style.cssText = "border-radius:12px;padding:0;";
+
+            const wrap = document.createElement('div');
+            wrap.className = "relative";
+            const img = document.createElement('img');
+            img.src = "https://i.ytimg.com/vi/" + v.id + "/hqdefault.jpg";
+            img.alt = v.t;
+            img.className = "w-full h-44 object-cover";
+            img.referrerPolicy = "no-referrer";
+            img.onerror = function () { this.onerror = null; this.src = "https://img.youtube.com/vi/" + v.id + "/hqdefault.jpg"; };
+            const overlay = document.createElement('div');
+            overlay.className = "absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition";
+            overlay.innerHTML = '<i class="fa-brands fa-youtube text-5xl text-red-600 drop-shadow"></i>';
+            wrap.appendChild(img); wrap.appendChild(overlay);
+
+            const body = document.createElement('div');
+            body.className = "p-5";
+            const t = document.createElement('p');
+            t.className = "sf-text-caption text-[#1d1d1f] font-semibold";
+            t.style.cssText = "display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;";
+            t.textContent = v.t;
+            const meta = document.createElement('p');
+            meta.className = "text-xs text-gray-400 mt-2";
+            meta.innerHTML = '<i class="fa-brands fa-youtube text-red-500 mr-1"></i> 유학티비 · edm유학센터';
+            body.appendChild(t); body.appendChild(meta);
+
+            a.appendChild(wrap); a.appendChild(body);
+            return a;
         }
 
         function renderVideos(list) {
             const sec = document.getElementById('videos-section');
+            const grid = document.getElementById('videos-grid');
             const uniq = [];
             const seen = {};
             (list || []).forEach(v => { if (v && !seen[v.id]) { seen[v.id] = 1; uniq.push(v); } });
+            grid.innerHTML = '';
             if (!uniq.length) { sec.classList.add('hidden'); return; }
-            document.getElementById('videos-grid').innerHTML = uniq.slice(0, 3).map(videoCard).join('');
+            uniq.slice(0, 3).forEach(v => grid.appendChild(videoCardEl(v)));
             sec.classList.remove('hidden');
         }
 
