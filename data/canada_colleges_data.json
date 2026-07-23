@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "캐나다 공립 컬리지 지역별·전공별 데이터",
+    "as_of": "2026-07-23",
+    "policy_basis": "IRCC 2026 학업허가 캡(408,000) 및 PGWP 적격 전공 목록 동결(2026-01-15) 기준",
+    "notes": [
+      "tuition_intl은 후속 조사 대상(각 컬리지 공식 international fees 페이지 기준으로 채울 것)",
+      "pgwp 판정은 섹터 단위 근사치이며 최종 확인은 프로그램별 CIP 코드로 할 것",
+      "market_tier: core(핵심)/major(주요)/secondary(보조)/special(특수)"
+    ]
+  },
+  "regions": [
+    {
+      "id": "ontario",
+      "name_ko": "온타리오",
+      "name_en": "Ontario",
+      "hub_cities": ["토론토", "오타와", "런던", "해밀턴"],
+      "tags": ["최대 취업 시장", "컬리지 24개교", "경쟁·생활비 높음", "OINP"],
+      "colleges": [
+        {"name": "Seneca Polytechnic", "city": "Toronto", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+        {"name": "Humber Polytechnic", "city": "Toronto", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+        {"name": "George Brown Polytechnic", "city": "Toronto", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+        {"name": "Centennial College", "city": "Toronto (Scarborough)", "type": "college", "market_tier": "core", "tuition_intl": null},
+        {"name": "Sheridan College", "city": "Oakville", "type": "polytechnic", "market_tier": "core", "strength": "애니메이션·디자인", "tuition_intl": null},
+        {"name": "Conestoga College", "city": "Kitchener", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+        {"name": "Fanshawe College", "city": "London", "type": "college", "market_tier": "core", "tuition_intl": null},
+        {"name": "Algonquin College", "city": "Ottawa", "type": "college", "market_tier": "core", "tuition_intl": null},
+        {"name": "Niagara College", "city": "Welland", "type": "college", "market_tier": "major", "strength": "조리·와인·호텔", "tuition_intl": null},
+        {"name": "Mohawk College", "city": "Hamilton", "type": "college", "market_tier": "major", "tuition_intl": null},
+        {"name": "Durham College", "city": "Oshawa", "type": "college", "market_tier": "major", "tuition_intl": null},
+        {"name": "Georgian College", "city": "Barrie", "type": "college", "market_tier": "major", "strength": "자동차", "tuition_intl": null},
+        {"name": "St. Lawrence College", "city": "Kingston", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Lambton College", "city": "Sarnia", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Fleming College", "city": "Peterborough", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Loyalist College", "city": "Belleville", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "St. Clair College", "city": "Windsor", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Cambrian College", "city": "Sudbury", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Canadore College", "city": "North Bay", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Confederation College", "city": "Thunder Bay", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Northern College", "city": "Timmins", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Sault College", "city": "Sault Ste. Marie", "type": "college", "market_tier": "secondary", "tuition_intl": null}
+      ],
+      "excluded": [
+        {"name": "Collège Boréal / Collège La Cité", "reason": "프랑스어 기관"}
+      ]
+    },
+    {
+      "id": "bc",
+      "name_ko": "브리티시컬럼비아",
+      "name_en": "British Columbia",
+      "hub_cities": ["밴쿠버", "빅토리아", "켈로나"],
+      "tags": ["대학 편입 제도화(BC Transfer)", "테크·보건 PNP", "생활비 최고 수준"],
+      "colleges": [
+        {"name": "BCIT", "city": "Burnaby", "type": "institute", "market_tier": "core", "strength": "취업 직결 실무", "tuition_intl": null},
+        {"name": "Langara College", "city": "Vancouver", "type": "college", "market_tier": "core", "strength": "UBC 편입", "tuition_intl": null},
+        {"name": "Douglas College", "city": "New Westminster", "type": "college", "market_tier": "core", "tuition_intl": null},
+        {"name": "Vancouver Community College", "city": "Vancouver", "type": "college", "market_tier": "core", "strength": "조리·실무", "tuition_intl": null},
+        {"name": "Camosun College", "city": "Victoria", "type": "college", "market_tier": "major", "tuition_intl": null},
+        {"name": "Okanagan College", "city": "Kelowna", "type": "college", "market_tier": "major", "tuition_intl": null},
+        {"name": "College of New Caledonia", "city": "Prince George", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "College of the Rockies", "city": "Cranbrook", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "North Island College", "city": "Courtenay", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Northern Lights College", "city": "Dawson Creek", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Selkirk College", "city": "Castlegar", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Coast Mountain College", "city": "Terrace", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Justice Institute of BC", "city": "New Westminster", "type": "institute", "market_tier": "special", "tuition_intl": null},
+        {"name": "Nicola Valley Institute of Technology", "city": "Merritt", "type": "institute", "market_tier": "special", "tuition_intl": null}
+      ],
+      "adjacent_universities": [
+        {"name": "Kwantlen Polytechnic University", "note": "학사 과정 시 PGWP 전공 제한 면제"},
+        {"name": "Capilano University", "note": "학사 과정 시 PGWP 전공 제한 면제"},
+        {"name": "Vancouver Island University", "note": "학사 과정 시 PGWP 전공 제한 면제"},
+        {"name": "University of the Fraser Valley", "note": "학사 과정 시 PGWP 전공 제한 면제"}
+      ]
+    },
+    {
+      "id": "alberta",
+      "name_ko": "알버타",
+      "name_en": "Alberta",
+      "hub_cities": ["캘거리", "에드먼턴"],
+      "tags": ["폴리테크닉 강세", "트레이드·에너지 산업", "AAIP 지방 우대", "생활비 상대적 저렴"],
+      "colleges": [
+        {"name": "SAIT", "city": "Calgary", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+        {"name": "NAIT", "city": "Edmonton", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+        {"name": "Bow Valley College", "city": "Calgary", "type": "college", "market_tier": "major", "tuition_intl": null},
+        {"name": "NorQuest College", "city": "Edmonton", "type": "college", "market_tier": "major", "tuition_intl": null},
+        {"name": "Red Deer Polytechnic", "city": "Red Deer", "type": "polytechnic", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Lethbridge Polytechnic", "city": "Lethbridge", "type": "polytechnic", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Northwestern Polytechnic", "city": "Grande Prairie", "type": "polytechnic", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Olds College of Agriculture & Technology", "city": "Olds", "type": "college", "market_tier": "special", "strength": "농업", "tuition_intl": null}
+      ]
+    },
+    {
+      "id": "prairies",
+      "name_ko": "프레리(매니토바·서스캐처원)",
+      "name_en": "Prairies (MB/SK)",
+      "hub_cities": ["위니펙", "새스커툰", "리자이나"],
+      "tags": ["학비·생활비 저렴", "MPNP·SINP 졸업생 우호", "이민 최우선 세그먼트"],
+      "colleges": [
+        {"name": "Red River College Polytechnic", "city": "Winnipeg", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+        {"name": "Assiniboine College", "city": "Brandon", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Manitoba Institute of Trades and Technology", "city": "Winnipeg", "type": "institute", "market_tier": "secondary", "tuition_intl": null},
+        {"name": "Saskatchewan Polytechnic", "city": "Saskatoon/Regina/Moose Jaw/Prince Albert", "type": "polytechnic", "market_tier": "core", "tuition_intl": null}
+      ]
+    },
+    {
+      "id": "atlantic",
+      "name_ko": "애틀랜틱",
+      "name_en": "Atlantic Canada",
+      "hub_cities": ["핼리팩스", "샬럿타운", "세인트존스"],
+      "tags": ["학비 최저 수준", "쿼터 경쟁 완화", "AIP 이민 경로", "가성비+이민 포지셔닝"],
+      "colleges": [
+        {"name": "Nova Scotia Community College (NSCC)", "city": "Halifax 등 NS 전역", "type": "college", "market_tier": "core", "tuition_intl": null},
+        {"name": "New Brunswick Community College (NBCC)", "city": "Fredericton 등 NB 전역", "type": "college", "market_tier": "major", "tuition_intl": null},
+        {"name": "Holland College", "city": "Charlottetown (PEI)", "type": "college", "market_tier": "major", "strength": "Culinary Institute of Canada", "tuition_intl": null},
+        {"name": "College of the North Atlantic (CNA)", "city": "NL 전역(17개 캠퍼스)", "type": "college", "market_tier": "major", "strength": "캐나다 최저가 수준 학비", "tuition_intl": null}
+      ],
+      "excluded": [
+        {"name": "CCNB / Collège de l'Île / Université Sainte-Anne", "reason": "프랑스어 기관"}
+      ]
+    }
+  ],
+  "major_categories": [
+    {"id": "health", "name_ko": "보건의료·사회서비스", "sector": "Healthcare & Social Services", "pgwp_non_degree": "eligible", "examples": ["Practical Nursing", "Health Care Assistant / PSW", "Dental Assisting", "Medical Laboratory Technology", "Pharmacy Technician", "Social Service Worker"], "immigration_note": "EE 보건 카테고리 연계, 최우선 추천군"},
+    {"id": "education", "name_ko": "유아교육·교육지원", "sector": "Education", "pgwp_non_degree": "eligible", "examples": ["Early Childhood Education (ECE)", "Educational Assistant"], "immigration_note": "2025-06 목록에 교육 분야 대거 추가"},
+    {"id": "it", "name_ko": "IT·컴퓨터", "sector": "STEM", "pgwp_non_degree": "eligible", "examples": ["Computer Programming", "Software Development", "Network & Cybersecurity", "Data Analytics"], "caution": "일부 세부 분야 2025 삭제 예고 후 보류 — CIP 확인 필수"},
+    {"id": "engineering_tech", "name_ko": "엔지니어링 테크놀로지", "sector": "STEM", "pgwp_non_degree": "eligible", "examples": ["Civil Engineering Technology", "Mechanical Engineering Technology", "Electrical Engineering Technology", "Architectural Technology"]},
+    {"id": "trades", "name_ko": "기술직(트레이드)", "sector": "Trades", "pgwp_non_degree": "eligible", "examples": ["Welding", "Electrician", "Plumbing", "HVAC", "Carpentry", "Automotive Service", "Heavy Duty Equipment"], "immigration_note": "알버타·프레리 강세, Red Seal 연계"},
+    {"id": "culinary", "name_ko": "조리·제빵", "sector": "Trades(추정)", "pgwp_non_degree": "conditional", "examples": ["Culinary Arts", "Baking & Pastry Arts"], "caution": "프로그램별 CIP 확인 필수. 2026 EE 트레이드 목록에서 요리사 제외 보도"},
+    {"id": "agriculture", "name_ko": "농업·농식품", "sector": "Agriculture & Agri-food", "pgwp_non_degree": "conditional", "examples": ["Horticulture", "Agribusiness", "Food Processing"], "caution": "일부 세부 전공 삭제 예고·보류 상태"},
+    {"id": "transport", "name_ko": "운송·항공", "sector": "Transport", "pgwp_non_degree": "conditional", "examples": ["Aviation Maintenance", "물류·운송 운영 일부"], "caution": "적격 범위 좁음, 개별 확인"},
+    {"id": "business", "name_ko": "비즈니스·경영", "sector": "-", "pgwp_non_degree": "not_eligible", "examples": ["Business Administration", "Management", "Marketing", "Accounting (디플로마)"], "alternative": "컬리지 학사(degree) 과정 또는 대학 편입으로 우회"},
+    {"id": "hospitality", "name_ko": "호스피탈리티·관광", "sector": "-", "pgwp_non_degree": "not_eligible", "examples": ["Hospitality Management", "Tourism"], "alternative": "학위 트랙·타국 대안 상담 유도"},
+    {"id": "media_arts", "name_ko": "미디어·디자인·일반 인문", "sector": "-", "pgwp_non_degree": "mostly_not_eligible", "examples": ["Graphic Design", "Animation", "General Arts"], "alternative": "예외 소수, 편입 트랙으로 유도"}
+  ],
+  "policy_snapshot_2026": {
+    "study_permit_cap_total": 408000,
+    "new_arrivals": 155000,
+    "pal_required_permits": 180000,
+    "pal_exempt": ["공립 DLI 석·박사(2026 신설)", "초·중·고", "동일 기관·동일 과정 연장"],
+    "pgwp_field_list": {"cip_codes": 1107, "status": "2026 연중 동결(2026-01-15 발표)", "sectors": ["보건·사회서비스", "교육", "기술직", "농업·농식품", "STEM", "운송"]},
+    "pgwp_language": {"degree": "CLB 7", "non_degree": "CLB 5"},
+    "degree_exemption": "학사·석·박사 졸업자는 전공 제한 없음(컬리지 학사 포함)"
+  }
+}
