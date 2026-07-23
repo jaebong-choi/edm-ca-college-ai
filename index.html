@@ -436,6 +436,19 @@
                 </div>
             </div>
 
+            <!-- 영어 성적 없을 때: 어학연수·ESL → 조건부 입학 안내 -->
+            <div id="lang-notice" class="hidden max-w-4xl mx-auto mb-24">
+                <div class="info-banner p-8 md:p-10">
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-language text-[#8CC63F] text-2xl mt-1"></i>
+                        <div>
+                            <h4 class="sf-display-card-bold text-white mb-2" id="lang-notice-title">영어 성적이 없어도 시작할 수 있습니다</h4>
+                            <p class="sf-text-body text-gray-300" id="lang-notice-desc"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Pathway Guide (디플로마 직행 / 포스트그래듀에이트 / 대학 편입) -->
             <div class="mb-24" id="pathway-guide-section">
                 <h3 class="sf-display-section text-center mb-3">캐나다 진학 경로 가이드</h3>
@@ -462,6 +475,18 @@
                 <p class="sf-text-caption text-gray-400 text-center mb-24">
                     ※ 본 안내는 2026년 IRCC 발표 기준이며 정책은 변동될 수 있습니다. 결과는 안내용이며, 프로그램별 최종 적격 여부(CIP 코드)와 최신 학비는 상담 시 확인해 드립니다.
                 </p>
+            </div>
+
+            <!-- Recommended Videos (유학티비) -->
+            <div id="videos-section" class="mb-24 hidden">
+                <h3 class="sf-display-section text-center mb-3">진단 결과 추천 영상</h3>
+                <p class="sf-text-body text-gray-500 text-center mb-12 max-w-2xl mx-auto">진단 결과에 맞춰 유학티비(edm유학센터 공식 채널) 영상을 골라 드렸습니다.</p>
+                <div id="videos-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+                <div class="text-center mt-8">
+                    <a href="https://www.youtube.com/@유학티비/videos" target="_blank" class="apple-link-pill light-bg">
+                        유학티비 채널 더 보기 <i class="fa-solid fa-chevron-right text-xs ml-2"></i>
+                    </a>
+                </div>
             </div>
 
             <!-- edm 실적 -->
@@ -1026,8 +1051,17 @@
 
         function renderPathwayGuide(routeKey) {
             const grid = document.getElementById('pathway-guide-grid');
-            grid.innerHTML = pathwayGuides.map(g => {
-                const isMine = g.key === routeKey;
+            const matched = pathwayGuides.filter(g => g.key === routeKey);
+            const list = matched.length ? matched : pathwayGuides;
+            // 해당 경로만 노출 (1개면 중앙 정렬, 여러 개면 열 수에 맞춤)
+            grid.className = list.length === 1
+                ? 'grid grid-cols-1 max-w-md mx-auto gap-6'
+                : 'grid grid-cols-1 md:grid-cols-' + list.length + ' gap-6';
+            document.getElementById('pathway-guide-sub').innerText = list.length === 1
+                ? '진단 결과, 아래 경로가 가장 적합합니다. edm유학센터가 이 경로의 준비 과정을 함께 설계해 드립니다.'
+                : '같은 목표라도 학력과 전공에 따라 최적의 경로는 다릅니다. edm유학센터가 진학 경로를 비교해 드립니다.';
+            grid.innerHTML = list.map(g => {
+                const isMine = true;
                 return `
                 <div class="apple-card-flat flex flex-col h-full ${isMine ? 'ring-2 ring-[#6CB640]' : 'border border-gray-200'}" style="border-radius:12px;">
                     ${isMine ? '<span class="region-badge mb-4 self-start"><i class="fa-solid fa-location-dot"></i> 내 추천 경로</span>' : '<span class="mb-4" style="height:24px;"></span>'}
@@ -1044,6 +1078,82 @@
                     <p class="sf-text-caption text-gray-500 mt-auto"><i class="fa-solid fa-circle-exclamation text-orange-500 mr-1"></i> ${g.caution}</p>
                 </div>`;
             }).join('');
+        }
+
+        // ============================================================
+        // 추천 영상 (유학티비 = edm유학센터 공식 채널)
+        // ============================================================
+        const VIDEOS = {
+            careerMajors:  { id: "5a1TKBFYTUQ", t: "캐나다 유학·이민 준비라면 필수! 취업 보장 전공 추천 (IT·헬스케어)" },
+            senecaPathway: { id: "Y6sDBcOOIxQ", t: "어학연수 후 세네카 컬리지 진학 썰 | 공인영어 없이 패스웨이 진학" },
+            sheridan:      { id: "VE-xJMvofUs", t: "쉐리던 컬리지 애니메이션 전공 합격생 인터뷰 | 포트폴리오 준비" },
+            workingHoliday:{ id: "ahQMJe_FVN4", t: "2026 캐나다 워킹홀리데이 신청 오픈 | 자격·서류·일정 체크리스트" },
+            taie:          { id: "kf9X4Tqb4CQ", t: "[캐나다 조기유학] 학군 좋고 안전한 TAIE 국제학교 직접 다녀왔습니다" },
+            surrey:        { id: "ZqVUpLA2JtI", t: "캐나다 유학, 이 학교부터! 써리 크리스찬 스쿨 (시설·환경 100점)" },
+            highschool:    { id: "WPHw0EeUEEw", t: "캐나다 고등학교, 한국과 뭐가 다를까? | 조기유학 솔직 후기" },
+            cityCompare:   { id: "Xp8CPFg6vww", t: "캐나다 조기유학 도시 찾기 | 토론토 vs 밴쿠버 비교" },
+            publicManaged: { id: "UBrAULpd2O0", t: "[캐나다 조기유학] 부모가 공부하면 자녀 학비 무료? 공립 무상교육 장단점" },
+            langVancouver: { id: "6Rp_R04361k", t: "캐나다 어학연수 ILAC 밴쿠버·기숙사 투어 | 소그룹 수업" },
+            langCost:      { id: "b3Y2U2WPdaI", t: "캐나다 어학연수 비용? 학비·생활비·숙소비·절약 팁 2분 요약" }
+        };
+
+        function videoCard(v) {
+            return `
+                <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener"
+                   class="apple-card-flat border border-gray-200 overflow-hidden group block" style="border-radius:12px;padding:0;">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="${v.t}" class="w-full h-44 object-cover" loading="lazy">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition">
+                            <i class="fa-brands fa-youtube text-5xl text-red-600 drop-shadow"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <p class="sf-text-caption text-[#1d1d1f] font-semibold" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">${v.t}</p>
+                        <p class="text-xs text-gray-400 mt-2"><i class="fa-brands fa-youtube text-red-500 mr-1"></i> 유학티비 · edm유학센터</p>
+                    </div>
+                </a>`;
+        }
+
+        function renderVideos(list) {
+            const sec = document.getElementById('videos-section');
+            const uniq = [];
+            const seen = {};
+            (list || []).forEach(v => { if (v && !seen[v.id]) { seen[v.id] = 1; uniq.push(v); } });
+            if (!uniq.length) { sec.classList.add('hidden'); return; }
+            document.getElementById('videos-grid').innerHTML = uniq.slice(0, 3).map(videoCard).join('');
+            sec.classList.remove('hidden');
+        }
+
+        // 결과별 추천 영상 선정
+        function pickVideos(track, p, routeKey) {
+            const V = VIDEOS;
+            const noEng = (p.english === "none" || p.english === "mid");
+            if (track === "ossd") {
+                // 중·고 재학: 국제 사립학교·조기유학 + 공립 관리형
+                if (p.bRegion === "bc") return [V.surrey, V.publicManaged, V.cityCompare];
+                return [V.taie, V.highschool, V.publicManaged];
+            }
+            if (track === "transfer") {
+                const list = [V.senecaPathway, V.careerMajors, (p.bField === "arts" ? V.sheridan : V.cityCompare)];
+                if (noEng) return [V.senecaPathway, V.langVancouver, V.careerMajors];
+                return list;
+            }
+            // career
+            const list = [V.careerMajors, V.senecaPathway, V.workingHoliday];
+            if (noEng) return [V.careerMajors, V.senecaPathway, V.langVancouver];
+            return list;
+        }
+
+        // 영어 성적 없을 때 안내 (어학연수/ESL → 조건부 입학)
+        function renderLangNotice(p, track) {
+            const el = document.getElementById('lang-notice');
+            const noEng = (p.english === "none" || p.english === "mid");
+            if (!noEng) { el.classList.add('hidden'); return; }
+            const desc = (track === "ossd")
+                ? "공인 영어 점수가 아직 없어도 괜찮습니다. 국제 사립학교의 ESL 과정을 12학년 정규 수업과 병행해 영어를 끌어올리며, 학교 성적으로 대학 조건부 입학 허가(Conditional Offer)를 받는 방식으로 진행할 수 있습니다."
+                : "공인 영어 점수가 아직 없어도 괜찮습니다. 현지 어학연수(패스웨이) 과정을 먼저 이수한 뒤, 어학원 수료 성적으로 컬리지·대학에 조건부 입학 허가(Conditional Offer)를 받을 수 있습니다. 별도의 IELTS 없이 진학한 사례도 많습니다.";
+            document.getElementById('lang-notice-desc').innerText = desc;
+            el.classList.remove('hidden');
         }
 
         // ============================================================
@@ -1323,6 +1433,9 @@
 
             document.getElementById('university-grid').innerHTML = pickColleges(regionIds, major.id).map(collegeCard).join('');
 
+            renderLangNotice(p, "career");
+            renderVideos(pickVideos("career", p, routeKey));
+
             renderCommonBlocks(major.name_ko, isPostgrad ? "포스트그래듀에이트" : "디플로마");
         }
 
@@ -1384,6 +1497,9 @@
             noteRegion.classList.remove('hidden');
 
             document.getElementById('university-grid').innerHTML = pickTransferColleges(p).map(collegeCard).join('');
+
+            renderLangNotice(p, "transfer");
+            renderVideos(pickVideos("transfer", p, "transfer"));
 
             renderCommonBlocks("대학 편입", "편입");
         }
@@ -1476,6 +1592,9 @@
 
             // 컬리지 3경로 가이드는 대학 직행 경로와 무관하므로 숨김
             document.getElementById('pathway-guide-section').classList.add('hidden');
+
+            renderLangNotice(p, "ossd");
+            renderVideos(pickVideos("ossd", p, "ossd"));
 
             renderCommonBlocks("국제 사립학교", "대학 직행");
         }
