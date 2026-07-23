@@ -1102,7 +1102,7 @@
                 <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener"
                    class="apple-card-flat border border-gray-200 overflow-hidden group block" style="border-radius:12px;padding:0;">
                     <div class="relative">
-                        <img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="${v.t}" class="w-full h-44 object-cover" loading="lazy">
+                        <img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="${v.t}" class="w-full h-44 object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/'+'${v.id}'+'/hqdefault.jpg'">
                         <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition">
                             <i class="fa-brands fa-youtube text-5xl text-red-600 drop-shadow"></i>
                         </div>
