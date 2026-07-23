@@ -1309,6 +1309,7 @@
             document.getElementById('hs-private-card').classList.add('hidden');
             document.getElementById('colleges-section').classList.remove('hidden');
             document.getElementById('colleges-title').innerText = "Recommended Colleges";
+            document.getElementById('pathway-guide-section').classList.remove('hidden');
 
             // Pathway Guide
             renderPathwayGuide(routeKey);
@@ -1372,6 +1373,7 @@
             document.getElementById('hs-private-card').classList.toggle('hidden', p.status !== "hs");
             document.getElementById('colleges-section').classList.remove('hidden');
             document.getElementById('colleges-title').innerText = "Recommended Colleges";
+            document.getElementById('pathway-guide-section').classList.remove('hidden');
 
             renderPathwayGuide("transfer");
 
@@ -1472,7 +1474,8 @@
             noteRegion.classList.remove('hidden');
             document.getElementById('university-grid').innerHTML = PRIVATE_SCHOOLS.map(privateSchoolCard).join('');
 
-            renderPathwayGuide("ossd"); // 3개 컬리지 경로는 참고용 — 하이라이트 없음
+            // 컬리지 3경로 가이드는 대학 직행 경로와 무관하므로 숨김
+            document.getElementById('pathway-guide-section').classList.add('hidden');
 
             renderCommonBlocks("국제 사립학교", "대학 직행");
         }
