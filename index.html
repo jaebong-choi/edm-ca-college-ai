@@ -449,7 +449,7 @@
             </div>
 
             <div id="colleges-section">
-                <h3 class="sf-display-section text-center mb-4">Recommended Colleges</h3>
+                <h3 class="sf-display-section text-center mb-4" id="colleges-title">Recommended Colleges</h3>
                 <p id="region-note" class="sf-text-caption text-gray-500 text-center mb-12 hidden"></p>
 
                 <!-- Colleges Grid -->
@@ -457,7 +457,7 @@
                     <!-- College Cards Injected Here -->
                 </div>
                 <p class="sf-text-caption text-gray-400 text-center mb-4">
-                    ※ 학비는 각 컬리지의 <strong class="text-gray-500">공식 국제학생 학비 확정 후 반영 예정</strong>이며, 현재는 상담 시 안내해 드립니다.
+                    ※ 학비는 각 학교의 <strong class="text-gray-500">공식 국제학생 학비 확정 후 반영 예정</strong>이며, 현재는 상담 시 안내해 드립니다.
                 </p>
                 <p class="sf-text-caption text-gray-400 text-center mb-24">
                     ※ 본 안내는 2026년 IRCC 발표 기준이며 정책은 변동될 수 있습니다. 결과는 안내용이며, 프로그램별 최종 적격 여부(CIP 코드)와 최신 학비는 상담 시 확인해 드립니다.
@@ -1308,6 +1308,7 @@
             // 국제 사립학교 카드는 편입 트랙 전용
             document.getElementById('hs-private-card').classList.add('hidden');
             document.getElementById('colleges-section').classList.remove('hidden');
+            document.getElementById('colleges-title').innerText = "Recommended Colleges";
 
             // Pathway Guide
             renderPathwayGuide(routeKey);
@@ -1370,6 +1371,7 @@
             // 고3·고교 졸업이면 국제 사립학교 → 대학 직행 경로도 함께 안내
             document.getElementById('hs-private-card').classList.toggle('hidden', p.status !== "hs");
             document.getElementById('colleges-section').classList.remove('hidden');
+            document.getElementById('colleges-title').innerText = "Recommended Colleges";
 
             renderPathwayGuide("transfer");
 
@@ -1382,6 +1384,46 @@
             document.getElementById('university-grid').innerHTML = pickTransferColleges(p).map(collegeCard).join('');
 
             renderCommonBlocks("대학 편입", "편입");
+        }
+
+        // ---------- 추천 국제 사립학교 (중·고 재학 결과 전용) ----------
+        const PRIVATE_SCHOOLS = [
+            { name: "BICC", city: "Toronto", note: "OSSD 12학년 · 대학 진학 집중 관리", point: "소수정예 관리형 수업과 대학 지원 컨설팅" },
+            { name: "TAIE International Institute", city: "Toronto", note: "OSSD 12학년 · ESL 병행", point: "유학생 대상 운영 노하우와 진학 실적" },
+            { name: "UMC High School", city: "Toronto", note: "OSSD 12학년 · ESL 병행", point: "유연한 입학 시기와 단계별 영어 지원" }
+        ];
+
+        function privateSchoolCard(s) {
+            return `
+                <div class="apple-card flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-start justify-between mb-2 gap-2">
+                            <h4 class="sf-display-card-bold text-[#1d1d1f]">${s.name}</h4>
+                            <span class="text-[11px] font-bold text-gray-400 bg-gray-100 rounded-full px-2.5 py-1 whitespace-nowrap mt-1">ON</span>
+                        </div>
+                        <p class="text-xs text-apple-blue font-semibold mb-4 mt-2 uppercase tracking-wider">국제 사립학교 · ${s.city}</p>
+                        <p class="sf-text-caption text-gray-500 mb-6 font-semibold uppercase tracking-wide">${s.note}</p>
+
+                        <div class="bg-[#fafafc] rounded-[8px] p-4 mb-8 space-y-3">
+                            <div class="flex justify-between sf-text-caption border-b border-gray-100 pb-2">
+                                <span class="text-gray-500">추천 포인트</span>
+                                <strong class="text-[#1d1d1f] text-right w-2/3">${s.point}</strong>
+                            </div>
+                            <div class="flex justify-between sf-text-caption border-b border-gray-100 pb-2">
+                                <span class="text-gray-500">과정</span>
+                                <strong class="text-[#1d1d1f] text-right w-1/2">OSSD 취득 → 대학 직행</strong>
+                            </div>
+                            <div class="flex justify-between sf-text-caption pt-1">
+                                <span class="text-gray-500">학비·입학 시기</span>
+                                <strong class="text-[#1d1d1f] text-orange-600">상담 시 안내</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="${BRAND_CONFIG.consultUrl}" target="_blank" class="apple-link-pill light-bg w-full text-center mt-auto">
+                        1:1 상담으로 자세히 보기 <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-2"></i>
+                    </a>
+                </div>
+            `;
         }
 
         // ---------- 트랙 B (중·고 재학): 국제 사립학교 → OSSD → 대학 직행 ----------
@@ -1422,8 +1464,13 @@
             // 국제 사립학교 상세 카드가 곧 추천 경로
             document.getElementById('hs-private-card').classList.remove('hidden');
 
-            // 컬리지 추천 섹션은 대학 직행 경로와 무관하므로 숨김
-            document.getElementById('colleges-section').classList.add('hidden');
+            // 추천 학교 섹션: 컬리지 대신 국제 사립학교 카드 표시
+            document.getElementById('colleges-section').classList.remove('hidden');
+            document.getElementById('colleges-title').innerText = "Recommended Schools";
+            const noteRegion = document.getElementById('region-note');
+            noteRegion.innerText = "※ 토론토 지역의 대표적인 국제 사립학교 예시입니다. 학생의 나이·성향·예산 등 상황에 따라 캐나다 공립 교육청 소속 학교의 관리형 유학으로도 추천해 드리며, 상담 시 두 경로를 비교해 안내해 드립니다.";
+            noteRegion.classList.remove('hidden');
+            document.getElementById('university-grid').innerHTML = PRIVATE_SCHOOLS.map(privateSchoolCard).join('');
 
             renderPathwayGuide("ossd"); // 3개 컬리지 경로는 참고용 — 하이라이트 없음
 
