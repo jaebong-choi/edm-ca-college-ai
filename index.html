@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>edm유학센터 - 호주 명문대 진학 AI 컨설팅 (학부·석사)</title>
-    <meta name="description" content="수능 6등급도 호주 명문대 합격. 학부·석사 패스웨이를 AI가 진단합니다. edm유학센터 호주 유학 전문 컨설팅.">
+    <title>edm유학센터 - 캐나다 공립 컬리지 진학 AI 컨설팅 (커리어·편입)</title>
+    <meta name="description" content="캐나다 컬리지 유학, 전공이 취업허가(PGWP)를 결정합니다. 전공·지역·예산을 분석해 취업·이민까지 이어지는 진학 경로를 3분 만에 진단합니다. edm유학센터 캐나다 유학 전문 컨설팅.">
 
     <!-- Open Graph (카카오톡/페이스북 링크 미리보기) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="edm유학센터">
-    <meta property="og:title" content="호주 명문대 진학, AI로 설계하다 | edm유학센터">
-    <meta property="og:description" content="학부(디플로마·파운데이션)부터 석사(GE·직행)까지, 내 상황에 맞는 호주 진학 루트를 3분 만에. 2026 공식 학비 데이터 기반.">
-    <meta property="og:url" content="https://jaebong-choi.github.io/edm-au-ai/">
-    <meta property="og:image" content="https://jaebong-choi.github.io/edm-au-ai/images/og-image.png?v=20260715">
+    <meta property="og:title" content="캐나다 컬리지 유학, 전공이 취업허가를 결정합니다 | edm유학센터">
+    <meta property="og:description" content="커리어·이민 트랙부터 대학 편입 트랙까지, 내 상황에 맞는 캐나다 진학 루트를 3분 만에. 2026 IRCC 정책 기준.">
+    <meta property="og:url" content="https://jaebong-choi.github.io/edm-ca-college-ai/">
+    <meta property="og:image" content="https://jaebong-choi.github.io/edm-ca-college-ai/images/og-image.png?v=20260723">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="ko_KR">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="호주 명문대 진학, AI로 설계하다 | edm유학센터">
-    <meta name="twitter:description" content="학부부터 석사까지, 내 상황에 맞는 호주 진학 루트를 3분 만에.">
-    <meta name="twitter:image" content="https://jaebong-choi.github.io/edm-au-ai/images/og-image.png?v=20260715">
+    <meta name="twitter:title" content="캐나다 컬리지 유학, 전공이 취업허가를 결정합니다 | edm유학센터">
+    <meta name="twitter:description" content="커리어·이민 트랙부터 대학 편입 트랙까지, 내 상황에 맞는 캐나다 진학 루트를 3분 만에.">
+    <meta name="twitter:image" content="https://jaebong-choi.github.io/edm-ca-college-ai/images/og-image.png?v=20260723">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -221,7 +221,7 @@
             padding: 32px;
         }
 
-        /* Region match badge */
+        /* Region match badge (+ PGWP 배지 색상 변형) */
         .region-badge {
             display: inline-flex;
             align-items: center;
@@ -233,6 +233,8 @@
             font-size: 12px;
             font-weight: 700;
         }
+        .region-badge.badge-warn { background: rgba(255, 149, 0, 0.14); color: #b25b00; }
+        .region-badge.badge-stop { background: rgba(255, 59, 48, 0.12); color: #c0392b; }
 
         /* Banner Design */
         .info-banner {
@@ -261,15 +263,15 @@
     <nav class="fixed top-0 w-full z-50 apple-nav-glass h-12 flex items-center">
         <div class="max-w-[980px] mx-auto w-full px-4 flex justify-between items-center text-xs sf-text-caption text-gray-300">
             <a href="#" class="hover:text-white transition flex items-center">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/img.edmuhak.com/uhak/renewal/common/edmuhak_logo.svg" alt="edm유학센터" class="h-4 nav-logo">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/img.edmuhak.com/uhak/renewal/common/edmuhak_logo.svg" alt="edm유학센터" class="h-4 nav-logo" data-brand-logo>
             </a>
             <div class="hidden md:flex space-x-8">
-                <a href="#" class="hover:text-white transition">Australia</a>
-                <a href="#" class="hover:text-white transition">Bachelor</a>
-                <a href="#" class="hover:text-white transition">Master</a>
-                <a href="https://www.edmuhak.com/university-abroad/austrailia/uni-guide-australia" target="_blank" class="hover:text-white transition">유학 정보</a>
+                <a href="#" class="hover:text-white transition">Canada</a>
+                <a href="#" class="hover:text-white transition">Career</a>
+                <a href="#" class="hover:text-white transition">Transfer</a>
+                <a href="https://www.edmuhak.com/university-abroad/canada/uni-guide-canada" target="_blank" class="hover:text-white transition" data-brand-href="guideUrl">유학 정보</a>
             </div>
-            <a href="tel:1833-2341" class="hover:text-white transition"><i class="fa-solid fa-phone"></i> 1833-2341</a>
+            <a href="tel:1833-2341" class="hover:text-white transition" data-brand-tel><i class="fa-solid fa-phone"></i> <span data-brand-phone>1833-2341</span></a>
         </div>
     </nav>
 
@@ -283,46 +285,46 @@
                 <p class="sf-text-body text-gray-400 mb-5 fade-in-up tracking-widest uppercase text-xs">EDM UHAK CENTER</p>
 
                 <h1 class="sf-display-hero text-apple-white mb-5 fade-in-up delay-100">
-                    수능 6등급,<br><span class="text-[#8CC63F]">호주 명문대 합격.</span>
+                    같은 컬리지를 나와도,<br><span class="text-[#8CC63F]">전공 하나로 취업허가가 갈립니다.</span>
                 </h1>
                 <p class="sf-text-body text-gray-300 max-w-xl mx-auto lg:mx-0 mb-10 fade-in-up delay-200">
-                    내신은 숫자일 뿐, 경로가 전부다.<br>성적과 목표를 분석해 학부·석사 두 트랙의 진학 경로를 설계합니다.
+                    2026년부터 캐나다 컬리지 졸업 후 취업허가(PGWP)는 전공이 결정합니다.<br>목표와 상황을 분석해 취업·이민까지 이어지는 진학 경로를 설계합니다.
                 </p>
 
-                <!-- 학부 / 석사 선택 -->
+                <!-- 커리어·이민 / 대학 편입 트랙 선택 -->
                 <div class="flex flex-col gap-4 fade-in-up delay-300 mb-8 max-w-md mx-auto lg:mx-0">
-                    <button onclick="startConsulting('학부 (Bachelor)')" class="degree-card w-full">
+                    <button onclick="startConsulting('career')" class="degree-card w-full">
+                        <div class="flex items-center justify-between mb-3">
+                            <i class="fa-solid fa-briefcase text-2xl text-[#8CC63F]"></i>
+                            <span class="go">진단 시작 <i class="fa-solid fa-arrow-right text-xs"></i></span>
+                        </div>
+                        <h3 class="sf-display-card-bold text-white mb-1">커리어·이민 트랙</h3>
+                        <p class="sf-text-caption text-gray-400">고졸·대졸·직장인. 공립 컬리지 디플로마로 취업허가(PGWP), 그리고 영주권 경로까지.</p>
+                    </button>
+                    <button onclick="startConsulting('transfer')" class="degree-card w-full">
                         <div class="flex items-center justify-between mb-3">
                             <i class="fa-solid fa-graduation-cap text-2xl text-[#8CC63F]"></i>
                             <span class="go">진단 시작 <i class="fa-solid fa-arrow-right text-xs"></i></span>
                         </div>
-                        <h3 class="sf-display-card-bold text-white mb-1">학부 진학 (Bachelor)</h3>
-                        <p class="sf-text-caption text-gray-400">고교 졸업(예정) · 검정고시 · 대학 재학/휴학생. 디플로마·파운데이션으로 명문대 편입까지.</p>
-                    </button>
-                    <button onclick="startConsulting('석사 (Master)')" class="degree-card w-full">
-                        <div class="flex items-center justify-between mb-3">
-                            <i class="fa-solid fa-user-tie text-2xl text-[#8CC63F]"></i>
-                            <span class="go">진단 시작 <i class="fa-solid fa-arrow-right text-xs"></i></span>
-                        </div>
-                        <h3 class="sf-display-card-bold text-white mb-1">석사 진학 (Master)</h3>
-                        <p class="sf-text-caption text-gray-400">대학 졸업(예정)자 · 직장인 커리어 전환. 비전공자 GE 과정으로 전문직 면허까지.</p>
+                        <h3 class="sf-display-card-bold text-white mb-1">대학 편입 트랙</h3>
+                        <p class="sf-text-caption text-gray-400">컬리지 2년 후 명문대 편입. BC 트랜스퍼 등 제도화된 편입 시스템으로 학비를 아끼며 학위까지.</p>
                     </button>
                 </div>
 
                 <p class="sf-text-caption text-gray-500 fade-in-up delay-400 mb-6">
-                    영어권 유학 전문 16년 연속 1위, 브리즈번·시드니·멜버른 호주 글로벌센터가 함께합니다.
+                    영어권 유학 전문 16년 연속 1위, edm유학센터가 진단부터 입학·비자까지 함께합니다.
                 </p>
 
                 <div class="fade-in-up delay-400">
-                    <a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="apple-link-pill">
+                    <a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="apple-link-pill" data-brand-href="consultUrl">
                         1:1 무료 상담 신청 <i class="fa-solid fa-chevron-right text-xs ml-2"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Right: Sydney photo -->
+            <!-- Right: hero photo (캐나다 이미지 교체 예정) -->
             <div class="fade-in-up delay-200 order-1 lg:order-2">
-                <img src="images/hero-sydney.jpg" alt="시드니 하버와 오페라하우스 전경"
+                <img src="images/hero-sydney.jpg" alt="캐나다 유학 안내 이미지"
                      class="rounded-2xl w-full h-56 md:h-80 lg:h-[560px] object-cover object-[70%_center] border border-white/10">
             </div>
         </div>
@@ -340,7 +342,7 @@
                 <button onclick="goBack()" class="apple-link-pill light-bg shrink-0" style="padding: 6px 16px; font-size: 15px;">
                     <i class="fa-solid fa-chevron-left text-xs mr-1"></i> 이전
                 </button>
-                <span id="track-chip" class="track-chip"><i class="fa-solid fa-graduation-cap"></i> 학부 트랙</span>
+                <span id="track-chip" class="track-chip"><i class="fa-solid fa-briefcase"></i> 커리어·이민 트랙</span>
                 <span class="shrink-0" style="width: 72px;" aria-hidden="true"></span>
             </div>
 
@@ -382,12 +384,8 @@
             <!-- Profile Summary -->
             <div class="mb-24 text-center">
                 <h3 class="sf-display-card mb-12">Profile Summary</h3>
-                <div class="flex flex-wrap justify-center gap-8 md:gap-14 sf-text-body">
-                    <div class="flex flex-col items-center"><span class="text-xs uppercase tracking-widest text-gray-500 mb-1">Course</span> <strong class="text-apple-dark-surface" id="sum-degree"></strong></div>
-                    <div class="flex flex-col items-center"><span class="text-xs uppercase tracking-widest text-gray-500 mb-1">Region</span> <strong class="text-apple-dark-surface" id="sum-region"></strong></div>
-                    <div class="flex flex-col items-center"><span class="text-xs uppercase tracking-widest text-gray-500 mb-1">English</span> <strong class="text-apple-dark-surface" id="sum-eng"></strong></div>
-                    <div class="flex flex-col items-center"><span class="text-xs uppercase tracking-widest text-gray-500 mb-1">Academics</span> <strong class="text-apple-dark-surface" id="sum-gpa"></strong></div>
-                    <div class="flex flex-col items-center"><span class="text-xs uppercase tracking-widest text-gray-500 mb-1">Target Major</span> <strong class="text-apple-dark-surface" id="sum-major"></strong></div>
+                <div class="flex flex-wrap justify-center gap-8 md:gap-14 sf-text-body" id="profile-summary">
+                    <!-- Summary items injected via JS -->
                 </div>
             </div>
 
@@ -395,32 +393,51 @@
             <div class="mb-24">
                 <h3 class="sf-display-section text-center mb-10">AI Recommended Major</h3>
                 <div class="apple-card max-w-4xl mx-auto">
+                    <div class="text-center mb-4" id="rec-major-badge"></div>
                     <h4 class="sf-display-card text-apple-blue mb-4 text-center" id="rec-major-title">전공 이름</h4>
-                    <p class="sf-text-body text-gray-600 leading-relaxed text-center max-w-2xl mx-auto" id="rec-major-desc">전공 설명</p>
+                    <p class="sf-text-body text-gray-600 leading-relaxed text-center max-w-2xl mx-auto mb-6" id="rec-major-desc">전공 설명</p>
+                    <div id="rec-major-programs" class="flex flex-wrap justify-center gap-2 mb-4"></div>
+                    <p id="rec-major-note" class="sf-text-caption text-gray-500 text-center max-w-2xl mx-auto hidden"></p>
+                </div>
+
+                <!-- PGWP 불가 전공 경고 카드 (해당 시에만 표시) -->
+                <div id="rec-warning" class="hidden apple-card-flat max-w-4xl mx-auto mt-6 border border-gray-200" style="border-radius:12px;">
+                    <p class="sf-text-body text-gray-700 mb-2 text-center">
+                        <i class="fa-solid fa-circle-exclamation text-red-500 mr-2"></i><strong id="rec-warning-text">이 전공의 컬리지 디플로마는 2026년 기준 졸업 후 취업허가(PGWP) 대상이 아닙니다.</strong>
+                    </p>
+                    <p class="sf-text-caption text-gray-500 text-center mb-6" id="rec-warning-alt"></p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-3">
+                        <button id="rec-alt-btn" onclick="" class="apple-link-pill light-bg"></button>
+                        <button onclick="startConsulting('transfer')" class="apple-link-pill light-bg">학위·편입 트랙으로 전환 <i class="fa-solid fa-stairs text-xs ml-2"></i></button>
+                        <a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="apple-btn-primary" data-brand-href="consultUrl">전문가 상담으로 대안 찾기</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Pathway Guide (파운데이션/디플로마/다이렉트 · 석사 3경로) -->
+            <!-- Pathway Guide (디플로마 직행 / 포스트그래듀에이트 / 대학 편입) -->
             <div class="mb-24" id="pathway-guide-section">
-                <h3 class="sf-display-section text-center mb-3">호주 진학 경로 가이드</h3>
+                <h3 class="sf-display-section text-center mb-3">캐나다 진학 경로 가이드</h3>
                 <p class="sf-text-body text-gray-500 text-center mb-12 max-w-2xl mx-auto" id="pathway-guide-sub">
-                    같은 목표라도 성적과 상황에 따라 최적의 경로는 다릅니다. edm유학센터가 세 가지 진학 경로를 비교해 드립니다.
+                    같은 목표라도 학력과 전공에 따라 최적의 경로는 다릅니다. edm유학센터가 세 가지 진학 경로를 비교해 드립니다.
                 </p>
                 <div id="pathway-guide-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
                 <p class="sf-text-caption text-gray-400 text-center mt-6">
-                    ※ 경로별 요구 성적·편입 인정 범위는 대학과 전공에 따라 다릅니다. edm유학센터 전문가가 학생별 최적 경로를 설계해 드립니다.
+                    ※ 경로별 입학 요건·편입 인정 범위는 컬리지와 전공에 따라 다릅니다. edm유학센터 전문가가 학생별 최적 경로를 설계해 드립니다.
                 </p>
             </div>
 
-            <h3 class="sf-display-section text-center mb-4">Recommended Universities</h3>
+            <h3 class="sf-display-section text-center mb-4">Recommended Colleges</h3>
             <p id="region-note" class="sf-text-caption text-gray-500 text-center mb-12 hidden"></p>
 
-            <!-- Universities Grid -->
+            <!-- Colleges Grid -->
             <div id="university-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4 mt-8">
-                <!-- University Cards Injected Here -->
+                <!-- College Cards Injected Here -->
             </div>
+            <p class="sf-text-caption text-gray-400 text-center mb-4">
+                ※ 학비는 각 컬리지의 <strong class="text-gray-500">공식 국제학생 학비 확정 후 반영 예정</strong>이며, 현재는 상담 시 안내해 드립니다.
+            </p>
             <p class="sf-text-caption text-gray-400 text-center mb-24">
-                ※ 표기된 금액은 <strong class="text-gray-500">2026년 국제 학생 홈페이지 기준 학비</strong>(각 대학 공식 사이트 발표 연간 학비)이며, 전공·과목 선택 및 연도별 인상에 따라 달라질 수 있습니다. 정확한 금액은 상담 시 확인해 드립니다.
+                ※ 본 안내는 2026년 IRCC 발표 기준이며 정책은 변동될 수 있습니다. 결과는 안내용이며, 프로그램별 최종 적격 여부(CIP 코드)와 최신 학비는 상담 시 확인해 드립니다.
             </p>
 
             <!-- edm 실적 -->
@@ -433,16 +450,16 @@
                         <p class="sf-text-caption text-gray-600">영어권 유학 전문 연속 1위</p>
                     </div>
                     <div class="apple-card-flat border border-gray-200 text-center" style="border-radius:12px;">
-                        <p class="text-4xl font-extrabold text-[#6CB640] mb-2">3<span class="text-xl">개 도시</span></p>
-                        <p class="sf-text-caption text-gray-600">브리즈번·시드니·멜버른 현지 케어</p>
+                        <p class="text-4xl font-extrabold text-[#6CB640] mb-2">2026</p>
+                        <p class="sf-text-caption text-gray-600">최신 IRCC 정책 기준 진단</p>
                     </div>
                     <div class="apple-card-flat border border-gray-200 text-center" style="border-radius:12px;">
                         <p class="text-4xl font-extrabold text-[#6CB640] mb-2">1:1</p>
-                        <p class="sf-text-caption text-gray-600">전공·성적별 맞춤 진학 설계</p>
+                        <p class="sf-text-caption text-gray-600">전공·목표별 맞춤 진학 설계</p>
                     </div>
                 </div>
                 <div class="text-center mt-8">
-                    <a href="https://www.edmuhak.com/review" target="_blank" class="apple-link-pill light-bg">
+                    <a href="https://www.edmuhak.com/review" target="_blank" class="apple-link-pill light-bg" data-brand-href="reviewUrl">
                         edm 유학 후기 보러가기 <i class="fa-solid fa-chevron-right text-xs ml-2"></i>
                     </a>
                 </div>
@@ -453,13 +470,13 @@
                 <div class="text-center md:text-left mb-8">
                     <p class="sf-text-caption text-[#8CC63F] font-semibold uppercase tracking-wider mb-2">Resource Center</p>
                     <h4 class="sf-display-card text-white mb-2" id="board-section-title">다음 단계로 이어가세요</h4>
-                    <p class="sf-text-body text-gray-400">진단 결과를 바탕으로 edm유학센터 전문가가 최신 입학 조건과 장학 정보를 1:1로 안내해 드립니다.</p>
+                    <p class="sf-text-body text-gray-400">진단 결과를 바탕으로 edm유학센터 전문가가 최신 입학 조건과 정책 정보를 1:1로 안내해 드립니다.</p>
                 </div>
                 <div id="board-articles" class="space-y-3 mb-8">
                     <!-- edm links injected via JS -->
                 </div>
                 <div class="text-center md:text-left">
-                    <a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="apple-btn-primary bg-white text-[#1d1d1f] hover:bg-gray-200">
+                    <a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="apple-btn-primary bg-white text-[#1d1d1f] hover:bg-gray-200" data-brand-href="consultUrl">
                         1:1 무료 상담 신청 <i class="fa-solid fa-arrow-right text-xs ml-2"></i>
                     </a>
                 </div>
@@ -471,20 +488,20 @@
                 <div class="apple-card-flat">
                     <h4 class="sf-display-card-bold mb-6 border-b border-gray-200 pb-4">Next Steps</h4>
                     <ul class="sf-text-body space-y-4 text-gray-600" id="next-steps-list">
-                        <!-- Injected via JS (학부/석사별 상이) -->
+                        <!-- Injected via JS -->
                     </ul>
                 </div>
 
                 <!-- YouTube Channel Card -->
                 <div class="apple-card-flat flex flex-col bg-[#272729] text-white">
                     <h4 class="sf-display-card-bold mb-6 border-b border-gray-600 pb-4">edm 유학 영상</h4>
-                    <a href="https://www.youtube.com/user/edmeducation1" target="_blank" class="block relative rounded-lg overflow-hidden group flex-1 bg-black">
+                    <a href="https://www.youtube.com/user/edmeducation1" target="_blank" class="block relative rounded-lg overflow-hidden group flex-1 bg-black" data-brand-href="youtubeUrl">
                         <img src="images/hero-sydney.jpg" alt="edm유학센터 유튜브 채널" class="w-full h-full object-cover transition duration-500 group-hover:scale-105 opacity-70 group-hover:opacity-50">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <i class="fa-brands fa-youtube text-5xl text-white opacity-90 shadow-sm drop-shadow-lg"></i>
                         </div>
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 pt-12">
-                            <span class="text-white sf-text-caption font-semibold block">호주 유학 생생 영상, edm 유튜브에서 확인하세요</span>
+                            <span class="text-white sf-text-caption font-semibold block">유학 생생 영상, edm 유튜브에서 확인하세요</span>
                             <span class="text-gray-400 text-xs mt-1 block">edm유학센터 공식 채널</span>
                         </div>
                     </a>
@@ -492,26 +509,25 @@
             </div>
         </div>
 
-        <!-- 호주 현지 지사 -->
+        <!-- 유학 전 과정 관리 -->
         <div class="max-w-[980px] mx-auto mt-8">
-            <img src="images/sydney-panorama.jpg" alt="시드니 하버브리지와 오페라하우스 파노라마" class="rounded-t-xl w-full h-36 md:h-48 object-cover" loading="lazy">
+            <img src="images/sydney-panorama.jpg" alt="캐나다 유학 파노라마 이미지" class="rounded-t-xl w-full h-36 md:h-48 object-cover" loading="lazy">
             <div class="info-banner p-10" style="border-top-left-radius:0;border-top-right-radius:0;">
                 <div class="text-center md:text-left mb-8">
-                    <h4 class="sf-display-card text-white mb-2">호주 현지에서도 이어지는 관리</h4>
-                    <p class="sf-text-body text-gray-400">출국이 끝이 아닙니다. edm유학센터 호주 글로벌센터(브리즈번·시드니·멜버른)가 입학 후 정착과 학업을 현지에서 지원합니다.</p>
+                    <h4 class="sf-display-card text-white mb-2">출국 후에도 이어지는 관리</h4>
+                    <p class="sf-text-body text-gray-400">출국이 끝이 아닙니다. edm유학센터가 입학 수속부터 현지 정착·학업 관리까지 캐나다 유학 전 과정을 지원합니다.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-y md:divide-y-0 divide-[#3a3a3c]">
                     <div class="py-5 md:py-2 md:px-6 md:first:pl-0">
-                        <p class="sf-text-body font-bold text-white mb-2">호주 글로벌센터 (브리즈번)</p>
-                        <p class="sf-text-caption text-gray-400 mb-1">L2, 226 Albert St, Brisbane QLD 4000</p>
-                        <p class="sf-text-caption text-gray-400">전화 +61 7 3003 1899</p>
+                        <p class="sf-text-body font-bold text-white mb-2">입학 수속 · 비자 관리</p>
+                        <p class="sf-text-caption text-gray-400">프로그램 선정, 입학허가서(LOA)·주정부 승인서(PAL) 준비, 학업허가(Study Permit) 신청까지 전 과정을 관리합니다.</p>
                     </div>
                     <div class="py-5 md:py-2 md:px-6">
-                        <p class="sf-text-body font-bold text-white mb-2">현지 네트워크</p>
-                        <p class="sf-text-caption text-gray-400">브리즈번·시드니·멜버른 현지 케어팀이 도착부터 정착, 학업 관리까지 함께합니다.</p>
+                        <p class="sf-text-body font-bold text-white mb-2">현지 지원 네트워크</p>
+                        <p class="sf-text-caption text-gray-400">토론토·밴쿠버 등 캐나다 주요 도시의 현지 파트너 네트워크로 도착 후 정착과 학업을 지원합니다.</p>
                     </div>
                 </div>
-                <p class="sf-text-caption text-gray-500 mt-6">※ 방문 시 사전 예약을 부탁드립니다. <a href="https://www.edmuhak.com/edm/branches/bsmgc" target="_blank" class="text-[#8CC63F] hover:underline">호주 글로벌센터 안내 보기</a></p>
+                <p class="sf-text-caption text-gray-500 mt-6">※ 자세한 현지 지원 내용은 <a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="text-[#8CC63F] hover:underline" data-brand-href="consultUrl">1:1 상담</a>에서 안내해 드립니다.</p>
             </div>
         </div>
 
@@ -519,12 +535,40 @@
         <div class="mt-20 text-center border-t border-gray-200 pt-16">
             <h2 class="sf-display-section mb-8">전문가와 함께 현실로 만드십시오.</h2>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="apple-btn-primary">
+                <a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="apple-btn-primary" data-brand-href="consultUrl">
                     1:1 무료 상담 신청
                 </a>
-                <a href="https://pf.kakao.com/_ZYxlVV/chat" target="_blank" class="apple-link-pill light-bg">
+                <a href="https://pf.kakao.com/_ZYxlVV/chat" target="_blank" class="apple-link-pill light-bg" data-brand-href="kakaoUrl">
                     카카오톡 상담 <i class="fa-solid fa-comment text-xs ml-2"></i>
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== 2026 정책 변화 (신규 섹션, 기존 컴포넌트 재사용) ===================== -->
+    <div id="policy-2026" class="bg-apple-black text-apple-white py-20 px-4">
+        <div class="max-w-[980px] mx-auto">
+            <div class="info-banner p-10">
+                <div class="text-center md:text-left mb-8">
+                    <p class="sf-text-caption text-[#8CC63F] font-semibold uppercase tracking-wider mb-2">2026 Policy Update</p>
+                    <h4 class="sf-display-card text-white mb-2">2026 캐나다 유학, 무엇이 달라졌나</h4>
+                    <p class="sf-text-body text-gray-400">캐나다 이민부(IRCC) 발표 기준, 컬리지 진학 전 반드시 알아야 할 세 가지 변화입니다.</p>
+                </div>
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-start gap-4 bg-[#1d1d1f] border border-[#3a3a3c] rounded-xl px-6 py-4">
+                        <i class="fa-solid fa-passport text-[#8CC63F] mt-1"></i>
+                        <span class="sf-text-body text-gray-200 text-left"><strong class="text-white">학업허가 총량 제한</strong> — 2026년 캐나다 전체 학업허가는 408,000건으로 제한되며, 컬리지 지원자는 주정부 승인서(PAL)가 필수입니다.</span>
+                    </div>
+                    <div class="flex items-start gap-4 bg-[#1d1d1f] border border-[#3a3a3c] rounded-xl px-6 py-4">
+                        <i class="fa-solid fa-briefcase text-[#8CC63F] mt-1"></i>
+                        <span class="sf-text-body text-gray-200 text-left"><strong class="text-white">비학위 과정은 적격 전공만 PGWP 가능</strong> — 디플로마 등 비학위 과정은 보건·교육·기술직·농업·STEM·운송 6개 섹터의 적격 전공만 졸업 후 취업허가(PGWP)를 받을 수 있습니다(2026년 목록 동결).</span>
+                    </div>
+                    <div class="flex items-start gap-4 bg-[#1d1d1f] border border-[#3a3a3c] rounded-xl px-6 py-4">
+                        <i class="fa-solid fa-graduation-cap text-[#8CC63F] mt-1"></i>
+                        <span class="sf-text-body text-gray-200 text-left"><strong class="text-white">학위 과정은 전공 제한 없음</strong> — 학사·석·박사 학위 과정 졸업자는 전공과 무관하게 PGWP가 가능합니다(컬리지 학사 포함).</span>
+                    </div>
+                </div>
+                <p class="sf-text-caption text-gray-500">※ 정책은 변동될 수 있으며, 최신 기준은 상담 시 확인해 드립니다.</p>
             </div>
         </div>
     </div>
@@ -534,241 +578,341 @@
         <div class="max-w-[980px] mx-auto">
             <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
                 <div>
-                    <img src="https://s3.ap-northeast-2.amazonaws.com/img.edmuhak.com/uhak/renewal/common/edmuhak_logo.svg" alt="edm유학센터" class="h-5 nav-logo mb-4">
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/img.edmuhak.com/uhak/renewal/common/edmuhak_logo.svg" alt="edm유학센터" class="h-5 nav-logo mb-4" data-brand-logo>
                     <p class="sf-text-caption text-gray-500 mb-1">edm유학센터 | 영어권 유학 전문 16년 연속 1위</p>
-                    <p class="sf-text-caption text-gray-500 mb-1">대표전화 <a href="tel:1833-2341" class="text-gray-300 hover:text-white">1833-2341</a></p>
-                    <p class="sf-text-caption text-gray-500">호주 글로벌센터: 브리즈번 · 시드니 · 멜버른</p>
+                    <p class="sf-text-caption text-gray-500 mb-1">대표전화 <a href="tel:1833-2341" class="text-gray-300 hover:text-white" data-brand-tel><span data-brand-phone>1833-2341</span></a></p>
+                    <p class="sf-text-caption text-gray-500">캐나다 공립 컬리지 · 대학 편입 진학 전문 컨설팅</p>
                 </div>
                 <div>
                     <p class="sf-text-caption font-bold text-gray-300 mb-3 uppercase tracking-wider">Follow</p>
                     <div class="flex flex-wrap gap-3">
                         <a href="https://blog.naver.com/edm_uhakcenter" target="_blank" rel="noopener" class="stat-chip hover:border-[#8CC63F] hover:text-white transition"><i class="fa-solid fa-pen-nib"></i> 네이버 블로그</a>
                         <a href="https://www.instagram.com/edm_uhak" target="_blank" rel="noopener" class="stat-chip hover:border-[#8CC63F] hover:text-white transition"><i class="fa-brands fa-instagram"></i> 인스타그램</a>
-                        <a href="https://www.youtube.com/user/edmeducation1" target="_blank" rel="noopener" class="stat-chip hover:border-[#8CC63F] hover:text-white transition"><i class="fa-brands fa-youtube"></i> 유튜브</a>
-                        <a href="https://pf.kakao.com/_ZYxlVV/chat" target="_blank" rel="noopener" class="stat-chip hover:border-[#8CC63F] hover:text-white transition"><i class="fa-solid fa-comment"></i> 카카오톡</a>
+                        <a href="https://www.youtube.com/user/edmeducation1" target="_blank" rel="noopener" class="stat-chip hover:border-[#8CC63F] hover:text-white transition" data-brand-href="youtubeUrl"><i class="fa-brands fa-youtube"></i> 유튜브</a>
+                        <a href="https://pf.kakao.com/_ZYxlVV/chat" target="_blank" rel="noopener" class="stat-chip hover:border-[#8CC63F] hover:text-white transition" data-brand-href="kakaoUrl"><i class="fa-solid fa-comment"></i> 카카오톡</a>
                     </div>
                 </div>
                 <div>
                     <p class="sf-text-caption font-bold text-gray-300 mb-3 uppercase tracking-wider">바로가기</p>
                     <ul class="sf-text-caption space-y-2">
-                        <li><a href="https://www.edmuhak.com/university-abroad/austrailia/uni-guide-australia" target="_blank" class="hover:text-white">호주 유학 가이드</a></li>
-                        <li><a href="https://www.edmuhak.com/review" target="_blank" class="hover:text-white">유학 후기</a></li>
-                        <li><a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="hover:text-white">무료 상담 신청</a></li>
-                        <li><a href="https://www.edmuhak.com/edm/branches/bsmgc" target="_blank" class="hover:text-white">호주 글로벌센터</a></li>
+                        <li><a href="https://www.edmuhak.com/university-abroad/canada/uni-guide-canada" target="_blank" class="hover:text-white" data-brand-href="guideUrl">캐나다 대학유학 가이드</a></li>
+                        <li><a href="https://www.edmuhak.com/review" target="_blank" class="hover:text-white" data-brand-href="reviewUrl">유학 후기</a></li>
+                        <li><a href="https://www.edmuhak.com/inquiry/consultation" target="_blank" class="hover:text-white" data-brand-href="consultUrl">무료 상담 신청</a></li>
+                        <li><a href="https://pf.kakao.com/_ZYxlVV/chat" target="_blank" class="hover:text-white" data-brand-href="kakaoUrl">카카오톡 상담</a></li>
                     </ul>
                 </div>
             </div>
-            <p class="sf-text-caption text-gray-600 mt-10 pt-6 border-t border-[#26262a]">© edm유학센터. All rights reserved.</p>
+            <p class="sf-text-caption text-gray-600 mt-10 pt-6 border-t border-[#26262a]">※ 퀘벡(CEGEP) 컬리지 진학은 별도 상담으로 안내해 드립니다.</p>
+            <p class="sf-text-caption text-gray-600 mt-3">© edm유학센터. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
         // ============================================================
-        // DATA: 학부(schools) / 석사(masterSchools) 프로그램 정보
-        // state: NSW / VIC / QLD / WA / SA / ACT
+        // BRAND_CONFIG: 로고·전화·상담/카카오 링크는 반드시 여기서만 교체
+        // (종로유학원 등 타 브랜드 적용 시 이 객체만 수정)
         // ============================================================
-        const majorData = {
-            "간호학과 (Nursing)": {
-                desc: "호주 영주권 발급 1위 직업군. 수능 6등급이나 검정고시로도 디플로마를 통해 명문대 진학이 가능하며, 높은 임금과 쾌적한 근무환경을 자랑합니다.",
-                masterDesc: "비전공 학사 소지자도 2년 GE(Graduate Entry) 과정으로 간호사 면허(RN) 취득이 가능합니다. 졸업 후 취업과 영주권 신청까지 이어지는 가장 확실한 커리어 전환 경로입니다.",
-                schools: [
-                    { name: "Griffith University", state: "QLD", degree: "Bachelor of Nursing (간호학 학사)", rank: "호주 내 최상위권", req: "수능 317점 또는 디플로마", ielts: "7.0", tuition: "AUD $41,500", url: "https://www.griffith.edu.au/study/nursing" },
-                    { name: "UTS", state: "NSW", degree: "Bachelor of Nursing (간호학 학사)", rank: "호주 간호학 1위 수준", req: "수능 310점 또는 디플로마", ielts: "7.0", tuition: "AUD $48,816", url: "https://www.uts.edu.au/study/find-a-course/bachelor-nursing" },
-                    { name: "QUT", state: "QLD", degree: "Bachelor of Nursing (간호학 학사)", rank: "퀸즐랜드 최대 규모", req: "수능 330점 또는 디플로마 편입", ielts: "7.0", tuition: "AUD $43,500", url: "https://www.qut.edu.au/courses/bachelor-of-nursing" }
-                ],
-                masterSchools: [
-                    { name: "University of Sydney", state: "NSW", degree: "Master of Nursing / Graduate Entry (간호학 석사)", rank: "QS 간호학 세계 최상위권", req: "학사 학위 (비전공 지원 가능)", ielts: "7.0", tuition: "AUD $51,300", url: "https://www.sydney.edu.au/courses/courses/pc/master-of-nursing.html" },
-                    { name: "Monash University", state: "VIC", degree: "Master of Nursing Practice (간호실무 석사)", rank: "Go8 명문 · 멜버른", req: "학사 학위 + 선수과목", ielts: "7.0", tuition: "AUD $47,400", url: "https://www.monash.edu/study/courses/find-a-course/nursing-practice-m6016" },
-                    { name: "QUT", state: "QLD", degree: "Master of Nursing - Entry to Practice (간호학 석사)", rank: "퀸즐랜드 간호 명문", req: "학사 학위 (비전공 지원 가능)", ielts: "7.0", tuition: "AUD $45,300", url: "https://www.qut.edu.au/courses/master-of-nursing-entry-to-practice" }
-                ]
+        const BRAND_CONFIG = {
+            name: "edm유학센터",
+            logo: "https://s3.ap-northeast-2.amazonaws.com/img.edmuhak.com/uhak/renewal/common/edmuhak_logo.svg",
+            phone: "1833-2341",
+            consultUrl: "https://www.edmuhak.com/inquiry/consultation",
+            kakaoUrl: "https://pf.kakao.com/_ZYxlVV/chat",
+            reviewUrl: "https://www.edmuhak.com/review",
+            guideUrl: "https://www.edmuhak.com/university-abroad/canada/uni-guide-canada",
+            youtubeUrl: "https://www.youtube.com/user/edmeducation1"
+        };
+
+        function applyBrand() {
+            document.querySelectorAll('[data-brand-href]').forEach(el => {
+                const url = BRAND_CONFIG[el.getAttribute('data-brand-href')];
+                if (url) el.href = url;
+            });
+            document.querySelectorAll('[data-brand-logo]').forEach(el => { el.src = BRAND_CONFIG.logo; el.alt = BRAND_CONFIG.name; });
+            document.querySelectorAll('[data-brand-tel]').forEach(el => el.href = 'tel:' + BRAND_CONFIG.phone);
+            document.querySelectorAll('[data-brand-phone]').forEach(el => el.textContent = BRAND_CONFIG.phone);
+        }
+        document.addEventListener('DOMContentLoaded', applyBrand);
+
+        // ============================================================
+        // DATA: data/canada_colleges_data.json을 인라인한 단일 데이터 소스
+        // (정적 file:// 미리보기 호환을 위해 기존 코드 방식대로 JS 객체로 포함.
+        //  수정 시 data/canada_colleges_data.json과 반드시 동기화할 것)
+        // ============================================================
+        const CANADA_DATA = {
+            "meta": {
+                "title": "캐나다 공립 컬리지 지역별·전공별 데이터",
+                "as_of": "2026-07-23",
+                "policy_basis": "IRCC 2026 학업허가 캡(408,000) 및 PGWP 적격 전공 목록 동결(2026-01-15) 기준"
             },
-            "약학/약대 (Pharmacy)": {
-                desc: "호주 약대 졸업 후 한국 약사 면허로 전환이 가능합니다. 수능 3~4등급으로 세계적인 명문대에 입학하여 높은 연봉을 기대할 수 있습니다.",
-                masterDesc: "화학·생물 등 관련 학사 이수자는 2년 Master of Pharmacy 과정으로 약사 등록 자격을 취득할 수 있습니다. 학부보다 짧은 기간에 전문직 면허에 도달하는 경로입니다.",
-                schools: [
-                    { name: "University of Sydney", state: "NSW", degree: "Bachelor of Pharmacy (Honours) / Master of Pharmacy Practice (약학 학·석사 통합)", rank: "QS 세계 20위권", req: "수능 346점 이상", ielts: "6.5", tuition: "AUD $60,600", url: "https://www.sydney.edu.au/courses/courses/uc/bachelor-of-pharmacy-honours-and-master-of-pharmacy-practice.html" },
-                    { name: "Monash University", state: "VIC", degree: "Bachelor of Pharmacy (Honours) / Master of Pharmacy (약학 학·석사 통합)", rank: "QS 세계 2위 (약학)", req: "수능 350점 이상 (선수과목 必)", ielts: "6.5", tuition: "AUD $60,100", url: "https://www.monash.edu/study/courses/find-a-course/pharmacy-p3001" },
-                    { name: "Griffith University", state: "QLD", degree: "Bachelor of Pharmacy (Honours) (약학 우수학사)", rank: "QS 151-200위", req: "수능 331점 (교차지원 가능)", ielts: "7.0", tuition: "AUD $43,500", url: "https://www.griffith.edu.au/study/degrees/bachelor-of-pharmacy-honours-1614" }
-                ],
-                masterSchools: [
-                    { name: "University of Sydney", state: "NSW", degree: "Master of Pharmacy (약학 석사 2년)", rank: "QS 세계 20위권", req: "관련 학사 (화학·생물 이수)", ielts: "7.0", tuition: "AUD $61,700", url: "https://www.sydney.edu.au/courses/courses/pc/master-of-pharmacy.html" },
-                    { name: "Monash University", state: "VIC", degree: "Bachelor of Pharmacy (Hons) / Master of Pharmacy - Graduate Entry (약대 GE 3년 단축)", rank: "QS 세계 2위 (약학)", req: "관련 학사 (GE 단축과정)", ielts: "6.5", tuition: "AUD $60,100", url: "https://www.monash.edu/study/courses/find-a-course/pharmacy-p3001" },
-                    { name: "Griffith University", state: "QLD", degree: "Master of Pharmacy (약학 석사)", rank: "QS 151-200위", req: "관련 학사 + GPA 요건", ielts: "6.5", tuition: "AUD $42,000", url: "https://www.griffith.edu.au/study/degrees/master-of-pharmacy-5661" }
-                ]
-            },
-            "IT 및 사이버보안 (IT/Cyber Security)": {
-                desc: "3년 만에 IT 학사 학위 취득이 가능합니다. 실무 중심 교육과 인턴십을 통해 글로벌 IT 기업 취업 및 호주 기술이민에 유리합니다.",
-                masterDesc: "비전공자도 지원 가능한 2년 Master of IT 과정이 다수 개설되어 있습니다. 문과 출신 직장인의 커리어 전환과 기술이민(ICT 직군)에 가장 인기 있는 경로입니다.",
-                schools: [
-                    { name: "UTS", state: "NSW", degree: "Bachelor of Information Technology (정보기술학 학사)", rank: "세계 88위 / 성장률 1위", req: "수능점수 또는 디플로마", ielts: "6.5", tuition: "AUD $54,770", url: "https://www.uts.edu.au/study/information-technology" },
-                    { name: "Monash University", state: "VIC", degree: "Bachelor of Information Technology (정보기술학 학사)", rank: "Go8 명문대", req: "수능 또는 디플로마", ielts: "6.5", tuition: "AUD $54,400", url: "https://www.monash.edu/study/courses/find-a-course/information-technology-c2000" },
-                    { name: "Griffith University", state: "QLD", degree: "Bachelor of Information Technology (정보기술학 학사)", rank: "상위 2% 명문", req: "수능 또는 디플로마", ielts: "6.5", tuition: "AUD $40,500", url: "https://www.griffith.edu.au/study/degrees/bachelor-of-information-technology-1538" }
-                ],
-                masterSchools: [
-                    { name: "UNSW", state: "NSW", degree: "Master of Information Technology (정보기술 석사)", rank: "Go8 · 호주 공학/IT 명문", req: "학사 학위 (비전공 트랙 有)", ielts: "6.5", tuition: "AUD $63,000", url: "https://www.unsw.edu.au/study/postgraduate/master-of-information-technology" },
-                    { name: "Monash University", state: "VIC", degree: "Master of Information Technology (정보기술 석사)", rank: "Go8 명문대", req: "학사 학위 (전공 무관)", ielts: "6.5", tuition: "AUD $55,500", url: "https://www.monash.edu/study/courses/find-a-course/information-technology-c6001" },
-                    { name: "QUT", state: "QLD", degree: "Master of Information Technology (정보기술 석사)", rank: "실무 중심 · 브리즈번", req: "학사 학위 (전공 무관)", ielts: "6.5", tuition: "AUD $45,000", url: "https://www.qut.edu.au/courses/master-of-information-technology" }
-                ]
-            },
-            "공학/엔지니어링 (Engineering)": {
-                desc: "토목, 기계, 전기 등 기술 직군으로 졸업 후 졸업생 비자(2년)를 통해 경력을 쌓고 기술이민을 신청하기 매우 좋은 분야입니다.",
-                masterDesc: "공학 학사 이수자는 2년 Master of Engineering(EA 인증) 과정으로 전문 엔지니어 자격을 강화할 수 있습니다. 졸업생 비자 및 기술이민 점수에서 가장 유리한 분야 중 하나입니다.",
-                schools: [
-                    { name: "UNSW", state: "NSW", degree: "Bachelor of Engineering (Honours) (공학 우수학사)", rank: "호주 공대 1위 수준", req: "수능 우수 또는 파운데이션", ielts: "6.5", tuition: "AUD $61,500", url: "https://www.unsw.edu.au/study/undergraduate/bachelor-of-engineering-honours" },
-                    { name: "QUT", state: "QLD", degree: "Bachelor of Engineering (Honours) (공학 우수학사)", rank: "실무/취업 우수", req: "수능 또는 디플로마", ielts: "6.5", tuition: "AUD $48,600", url: "https://www.qut.edu.au/courses/bachelor-of-engineering-honours" },
-                    { name: "University of Sydney", state: "NSW", degree: "Bachelor of Engineering Honours (공학 우수학사)", rank: "Go8 최상위 명문", req: "수능 우수 또는 파운데이션", ielts: "6.5", tuition: "AUD $60,600", url: "https://www.sydney.edu.au/courses/courses/uc/bachelor-of-engineering-honours-flexible-first-year.html" }
-                ],
-                masterSchools: [
-                    { name: "UNSW", state: "NSW", degree: "Master of Engineering (공학 석사, EA 인증)", rank: "호주 공대 1위 수준", req: "공학 계열 학사", ielts: "6.5", tuition: "AUD $61,000", url: "https://www.unsw.edu.au/study/postgraduate/master-of-engineering" },
-                    { name: "University of Melbourne", state: "VIC", degree: "Master of Engineering - Civil 등 전공별 (공학 석사)", rank: "QS 세계 10위권", req: "이공계 학사 (비전공 트랙 有)", ielts: "6.5", tuition: "AUD $62,976", url: "https://study.unimelb.edu.au/find/courses/graduate/master-of-civil-engineering/" },
-                    { name: "University of Queensland", state: "QLD", degree: "Master of Engineering Science (공학과학 석사)", rank: "Go8 · 브리즈번", req: "공학 계열 학사 + GPA", ielts: "6.5", tuition: "AUD $60,952", url: "https://study.uq.edu.au/study-options/programs/master-engineering-science-5528" }
-                ]
-            },
-            "의대/의전원 (Medicine)": {
-                desc: "한국 수능 점수로 지원이 가능합니다. ISAT/UCAT 등 적성검사와 인터뷰가 요구되며 철저한 사전 준비가 필수적입니다.",
-                masterDesc: "학사 학위 소지자는 GAMSAT/MCAT 응시 후 4년 의학전문(MD) 과정에 지원할 수 있습니다. 학부 성적(GPA)과 적성시험, 인터뷰를 종합 평가하므로 전략적 준비가 필수입니다.",
-                schools: [
-                    { name: "University of Sydney", state: "NSW", degree: "Bachelor of Science and Doctor of Medicine (의학 통합 학·석사 7년)", rank: "의대 7년 과정", req: "CSAT 393, 인터뷰", ielts: "7.0", tuition: "AUD $60,600~97,000", url: "https://www.sydney.edu.au/courses/courses/uc/bachelor-of-science-and-doctor-of-medicine.html" },
-                    { name: "WSU", state: "NSW", degree: "Bachelor of Clinical Science (Medicine) / Doctor of Medicine (의학 통합 5년)", rank: "의대 5년 과정", req: "CSAT 370, ISAT 요구", ielts: "7.0", tuition: "AUD $85,520", url: "https://www.westernsydney.edu.au/future/study/courses/undergraduate/doctor-of-medicine" },
-                    { name: "Monash University", state: "VIC", degree: "Bachelor of Medical Science and Doctor of Medicine (의학 통합 학·석사 5년)", rank: "의대 5년 과정", req: "CSAT 380, ISAT, 인터뷰", ielts: "7.0", tuition: "AUD $101,600", url: "https://www.monash.edu/study/courses/find-a-course/medical-science-and-medicine-direct-entry-m6011" }
-                ],
-                masterSchools: [
-                    { name: "University of Melbourne", state: "VIC", degree: "Doctor of Medicine (MD, 의학전문 4년)", rank: "QS 의학 세계 10위권", req: "학사 + GAMSAT/MCAT + 인터뷰", ielts: "7.0", tuition: "AUD $122,976", url: "https://study.unimelb.edu.au/find/courses/graduate/doctor-of-medicine/" },
-                    { name: "University of Queensland", state: "QLD", degree: "Doctor of Medicine (MD, 4년)", rank: "Go8 의학 명문", req: "학사 + GAMSAT/MCAT", ielts: "7.0", tuition: "AUD $109,328", url: "https://study.uq.edu.au/study-options/programs/doctor-medicine-5740" },
-                    { name: "University of Sydney", state: "NSW", degree: "Doctor of Medicine (MD, 4년)", rank: "QS 세계 20위권", req: "학사 + GAMSAT + 인터뷰", ielts: "7.0", tuition: "AUD $97,000", url: "https://www.sydney.edu.au/courses/courses/pc/doctor-of-medicine.html" }
-                ]
-            },
-            "호텔경영학 (Hospitality)": {
-                desc: "세계적인 관광 대국 호주. 학위 과정 중 포함된 유급 인턴십을 통해 글로벌 경력과 높은 연봉을 기대할 수 있습니다.",
-                masterDesc: "전공 무관 학사 소지자가 지원 가능한 관광·호텔경영 석사 과정입니다. 유급 인턴십과 글로벌 호텔 체인 네트워크로 실무 경력을 쌓아 관리자(Manager) 커리어로 직행합니다.",
-                schools: [
-                    { name: "Griffith University", state: "QLD", degree: "Bachelor of International Tourism and Hotel Management (국제관광호텔경영학 학사)", rank: "호주 호텔경영 1위", req: "수능 317점 또는 디플로마", ielts: "6.5", tuition: "AUD $38,000", url: "https://www.griffith.edu.au/study/degrees/bachelor-of-international-tourism-and-hotel-management-1408" },
-                    { name: "The Hotel School", state: "NSW", degree: "Bachelor of Business in Hotel Management (호텔경영 상학학사)", rank: "유급 인턴십 최강", req: "고교 졸업 이상 (내신 무관)", ielts: "6.0", tuition: "AUD $34,500", url: "https://hotelschool.scu.edu.au/" }
-                ],
-                masterSchools: [
-                    { name: "Griffith University", state: "QLD", degree: "Master of International Tourism and Hospitality Management (국제관광호스피탈리티 석사)", rank: "호주 호텔경영 1위", req: "학사 학위 (전공 무관)", ielts: "6.5", tuition: "AUD $41,000", url: "https://www.griffith.edu.au/study/degrees/master-of-international-tourism-and-hospitality-management-5709" },
-                    { name: "Blue Mountains (BMIHMS)", state: "NSW", degree: "Master of International Hotel Management (국제호텔경영 석사)", rank: "호주 호텔스쿨 명성 1위", req: "학사 또는 관련 경력", ielts: "6.5", tuition: "AUD $45,600", url: "https://www.torrens.edu.au/courses/hospitality/master-of-international-hotel-management" },
-                    { name: "The Hotel School", state: "NSW", degree: "Master of Business in Global Hotel Leadership (글로벌호텔리더십 석사)", rank: "유급 인턴십 최강", req: "학사 학위 (전공 무관)", ielts: "6.5", tuition: "AUD $37,000", url: "https://hotelschool.scu.edu.au/" }
-                ]
+            "regions": [
+                {
+                    "id": "ontario",
+                    "name_ko": "온타리오",
+                    "name_en": "Ontario",
+                    "hub_cities": ["토론토", "오타와", "런던", "해밀턴"],
+                    "tags": ["최대 취업 시장", "컬리지 24개교", "경쟁·생활비 높음", "OINP"],
+                    "colleges": [
+                        {"name": "Seneca Polytechnic", "city": "Toronto", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+                        {"name": "Humber Polytechnic", "city": "Toronto", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+                        {"name": "George Brown Polytechnic", "city": "Toronto", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+                        {"name": "Centennial College", "city": "Toronto (Scarborough)", "type": "college", "market_tier": "core", "tuition_intl": null},
+                        {"name": "Sheridan College", "city": "Oakville", "type": "polytechnic", "market_tier": "core", "strength": "애니메이션·디자인", "tuition_intl": null},
+                        {"name": "Conestoga College", "city": "Kitchener", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+                        {"name": "Fanshawe College", "city": "London", "type": "college", "market_tier": "core", "tuition_intl": null},
+                        {"name": "Algonquin College", "city": "Ottawa", "type": "college", "market_tier": "core", "tuition_intl": null},
+                        {"name": "Niagara College", "city": "Welland", "type": "college", "market_tier": "major", "strength": "조리·와인·호텔", "tuition_intl": null},
+                        {"name": "Mohawk College", "city": "Hamilton", "type": "college", "market_tier": "major", "tuition_intl": null},
+                        {"name": "Durham College", "city": "Oshawa", "type": "college", "market_tier": "major", "tuition_intl": null},
+                        {"name": "Georgian College", "city": "Barrie", "type": "college", "market_tier": "major", "strength": "자동차", "tuition_intl": null},
+                        {"name": "St. Lawrence College", "city": "Kingston", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Lambton College", "city": "Sarnia", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Fleming College", "city": "Peterborough", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Loyalist College", "city": "Belleville", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "St. Clair College", "city": "Windsor", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Cambrian College", "city": "Sudbury", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Canadore College", "city": "North Bay", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Confederation College", "city": "Thunder Bay", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Northern College", "city": "Timmins", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Sault College", "city": "Sault Ste. Marie", "type": "college", "market_tier": "secondary", "tuition_intl": null}
+                    ]
+                },
+                {
+                    "id": "bc",
+                    "name_ko": "브리티시컬럼비아",
+                    "name_en": "British Columbia",
+                    "hub_cities": ["밴쿠버", "빅토리아", "켈로나"],
+                    "tags": ["대학 편입 제도화(BC Transfer)", "테크·보건 PNP", "생활비 최고 수준"],
+                    "colleges": [
+                        {"name": "BCIT", "city": "Burnaby", "type": "institute", "market_tier": "core", "strength": "취업 직결 실무", "tuition_intl": null},
+                        {"name": "Langara College", "city": "Vancouver", "type": "college", "market_tier": "core", "strength": "UBC 편입", "tuition_intl": null},
+                        {"name": "Douglas College", "city": "New Westminster", "type": "college", "market_tier": "core", "tuition_intl": null},
+                        {"name": "Vancouver Community College", "city": "Vancouver", "type": "college", "market_tier": "core", "strength": "조리·실무", "tuition_intl": null},
+                        {"name": "Camosun College", "city": "Victoria", "type": "college", "market_tier": "major", "tuition_intl": null},
+                        {"name": "Okanagan College", "city": "Kelowna", "type": "college", "market_tier": "major", "tuition_intl": null},
+                        {"name": "College of New Caledonia", "city": "Prince George", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "College of the Rockies", "city": "Cranbrook", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "North Island College", "city": "Courtenay", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Northern Lights College", "city": "Dawson Creek", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Selkirk College", "city": "Castlegar", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Coast Mountain College", "city": "Terrace", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Justice Institute of BC", "city": "New Westminster", "type": "institute", "market_tier": "special", "tuition_intl": null},
+                        {"name": "Nicola Valley Institute of Technology", "city": "Merritt", "type": "institute", "market_tier": "special", "tuition_intl": null}
+                    ],
+                    "adjacent_universities": [
+                        {"name": "Kwantlen Polytechnic University", "note": "학사 과정 시 PGWP 전공 제한 면제"},
+                        {"name": "Capilano University", "note": "학사 과정 시 PGWP 전공 제한 면제"},
+                        {"name": "Vancouver Island University", "note": "학사 과정 시 PGWP 전공 제한 면제"},
+                        {"name": "University of the Fraser Valley", "note": "학사 과정 시 PGWP 전공 제한 면제"}
+                    ]
+                },
+                {
+                    "id": "alberta",
+                    "name_ko": "알버타",
+                    "name_en": "Alberta",
+                    "hub_cities": ["캘거리", "에드먼턴"],
+                    "tags": ["폴리테크닉 강세", "트레이드·에너지 산업", "AAIP 지방 우대", "생활비 상대적 저렴"],
+                    "colleges": [
+                        {"name": "SAIT", "city": "Calgary", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+                        {"name": "NAIT", "city": "Edmonton", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+                        {"name": "Bow Valley College", "city": "Calgary", "type": "college", "market_tier": "major", "tuition_intl": null},
+                        {"name": "NorQuest College", "city": "Edmonton", "type": "college", "market_tier": "major", "tuition_intl": null},
+                        {"name": "Red Deer Polytechnic", "city": "Red Deer", "type": "polytechnic", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Lethbridge Polytechnic", "city": "Lethbridge", "type": "polytechnic", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Northwestern Polytechnic", "city": "Grande Prairie", "type": "polytechnic", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Olds College of Agriculture & Technology", "city": "Olds", "type": "college", "market_tier": "special", "strength": "농업", "tuition_intl": null}
+                    ]
+                },
+                {
+                    "id": "prairies",
+                    "name_ko": "프레리(매니토바·서스캐처원)",
+                    "name_en": "Prairies (MB/SK)",
+                    "hub_cities": ["위니펙", "새스커툰", "리자이나"],
+                    "tags": ["학비·생활비 저렴", "MPNP·SINP 졸업생 우호", "이민 최우선 세그먼트"],
+                    "colleges": [
+                        {"name": "Red River College Polytechnic", "city": "Winnipeg", "type": "polytechnic", "market_tier": "core", "tuition_intl": null},
+                        {"name": "Assiniboine College", "city": "Brandon", "type": "college", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Manitoba Institute of Trades and Technology", "city": "Winnipeg", "type": "institute", "market_tier": "secondary", "tuition_intl": null},
+                        {"name": "Saskatchewan Polytechnic", "city": "Saskatoon/Regina/Moose Jaw/Prince Albert", "type": "polytechnic", "market_tier": "core", "tuition_intl": null}
+                    ]
+                },
+                {
+                    "id": "atlantic",
+                    "name_ko": "애틀랜틱",
+                    "name_en": "Atlantic Canada",
+                    "hub_cities": ["핼리팩스", "샬럿타운", "세인트존스"],
+                    "tags": ["학비 최저 수준", "쿼터 경쟁 완화", "AIP 이민 경로", "가성비+이민 포지셔닝"],
+                    "colleges": [
+                        {"name": "Nova Scotia Community College (NSCC)", "city": "Halifax 등 NS 전역", "type": "college", "market_tier": "core", "tuition_intl": null},
+                        {"name": "New Brunswick Community College (NBCC)", "city": "Fredericton 등 NB 전역", "type": "college", "market_tier": "major", "tuition_intl": null},
+                        {"name": "Holland College", "city": "Charlottetown (PEI)", "type": "college", "market_tier": "major", "strength": "Culinary Institute of Canada", "tuition_intl": null},
+                        {"name": "College of the North Atlantic (CNA)", "city": "NL 전역(17개 캠퍼스)", "type": "college", "market_tier": "major", "strength": "캐나다 최저가 수준 학비", "tuition_intl": null}
+                    ]
+                }
+            ],
+            "major_categories": [
+                {"id": "health", "name_ko": "보건의료·사회서비스", "sector": "Healthcare & Social Services", "pgwp_non_degree": "eligible", "examples": ["Practical Nursing", "Health Care Assistant / PSW", "Dental Assisting", "Medical Laboratory Technology", "Pharmacy Technician", "Social Service Worker"], "immigration_note": "EE 보건 카테고리 연계, 최우선 추천군"},
+                {"id": "education", "name_ko": "유아교육·교육지원", "sector": "Education", "pgwp_non_degree": "eligible", "examples": ["Early Childhood Education (ECE)", "Educational Assistant"], "immigration_note": "2025-06 목록에 교육 분야 대거 추가"},
+                {"id": "it", "name_ko": "IT·컴퓨터", "sector": "STEM", "pgwp_non_degree": "eligible", "examples": ["Computer Programming", "Software Development", "Network & Cybersecurity", "Data Analytics"], "caution": "일부 세부 분야 2025 삭제 예고 후 보류 — CIP 확인 필수"},
+                {"id": "engineering_tech", "name_ko": "엔지니어링 테크놀로지", "sector": "STEM", "pgwp_non_degree": "eligible", "examples": ["Civil Engineering Technology", "Mechanical Engineering Technology", "Electrical Engineering Technology", "Architectural Technology"]},
+                {"id": "trades", "name_ko": "기술직(트레이드)", "sector": "Trades", "pgwp_non_degree": "eligible", "examples": ["Welding", "Electrician", "Plumbing", "HVAC", "Carpentry", "Automotive Service", "Heavy Duty Equipment"], "immigration_note": "알버타·프레리 강세, Red Seal 연계"},
+                {"id": "culinary", "name_ko": "조리·제빵", "sector": "Trades(추정)", "pgwp_non_degree": "conditional", "examples": ["Culinary Arts", "Baking & Pastry Arts"], "caution": "프로그램별 CIP 확인 필수. 2026 EE 트레이드 목록에서 요리사 제외 보도"},
+                {"id": "agriculture", "name_ko": "농업·농식품", "sector": "Agriculture & Agri-food", "pgwp_non_degree": "conditional", "examples": ["Horticulture", "Agribusiness", "Food Processing"], "caution": "일부 세부 전공 삭제 예고·보류 상태"},
+                {"id": "transport", "name_ko": "운송·항공", "sector": "Transport", "pgwp_non_degree": "conditional", "examples": ["Aviation Maintenance", "물류·운송 운영 일부"], "caution": "적격 범위 좁음, 개별 확인"},
+                {"id": "business", "name_ko": "비즈니스·경영", "sector": "-", "pgwp_non_degree": "not_eligible", "examples": ["Business Administration", "Management", "Marketing", "Accounting (디플로마)"], "alternative": "컬리지 학사(degree) 과정 또는 대학 편입으로 우회"},
+                {"id": "hospitality", "name_ko": "호스피탈리티·관광", "sector": "-", "pgwp_non_degree": "not_eligible", "examples": ["Hospitality Management", "Tourism"], "alternative": "학위 트랙·타국 대안 상담 유도"},
+                {"id": "media_arts", "name_ko": "미디어·디자인·일반 인문", "sector": "-", "pgwp_non_degree": "mostly_not_eligible", "examples": ["Graphic Design", "Animation", "General Arts"], "alternative": "예외 소수, 편입 트랙으로 유도"}
+            ],
+            "policy_snapshot_2026": {
+                "study_permit_cap_total": 408000,
+                "new_arrivals": 155000,
+                "pal_required_permits": 180000,
+                "pal_exempt": ["공립 DLI 석·박사(2026 신설)", "초·중·고", "동일 기관·동일 과정 연장"],
+                "pgwp_field_list": {"cip_codes": 1107, "status": "2026 연중 동결(2026-01-15 발표)", "sectors": ["보건·사회서비스", "교육", "기술직", "농업·농식품", "STEM", "운송"]},
+                "pgwp_language": {"degree": "CLB 7", "non_degree": "CLB 5"},
+                "degree_exemption": "학사·석·박사 졸업자는 전공 제한 없음(컬리지 학사 포함)"
             }
         };
 
-        const regionLabels = { "NSW": "뉴사우스웨일즈 (시드니)", "VIC": "빅토리아 (멜버른)", "QLD": "퀸즐랜드 (브리즈번·골드코스트)", "OTHER": "기타 지역 (퍼스·애들레이드·캔버라)", "ANY": "상관없음" };
+        const REGIONS = {};
+        CANADA_DATA.regions.forEach(r => REGIONS[r.id] = r);
+        const MAJORS = {};
+        CANADA_DATA.major_categories.forEach(m => MAJORS[m.id] = m);
+        const REGION_SHORT = { "ontario": "ON", "bc": "BC", "alberta": "AB", "prairies": "MB·SK", "atlantic": "ATL" };
+        const TYPE_LABELS = { "college": "컬리지", "polytechnic": "폴리테크닉", "institute": "인스티튜트" };
+        const TIER_LABELS = { "core": "핵심 추천", "major": "주요 추천", "secondary": "추천", "special": "특화" };
 
-        let userProfile = { degree: "", region: "", regionCode: "ANY", english: "", grades: "", major: "", target: "" };
-        let currentStepId = "region";
-        let stepCount = 1;
-        let stepHistory = []; // 뒤로가기용 스냅샷 스택 {stepId, stepCount, profile}
-        const totalEstimatedSteps = 5; // 지역 → 영어 → 성적 → 전공 → 목표
-
+        // ============================================================
+        // 진단 플로우 (트랙 A: 커리어·이민 6문항 / 트랙 B: 대학 편입 4문항)
+        // ============================================================
         const questionFlow = {
-            "region": {
-                question: "선호하는 호주 지역을 선택해 주세요.",
+            "a_status": {
+                question: "현재 상태를 알려주세요.",
+                key: "status",
                 options: [
-                    { label: "뉴사우스웨일즈 (시드니)", next: "eng_type", val: "NSW" },
-                    { label: "빅토리아 (멜버른)", next: "eng_type", val: "VIC" },
-                    { label: "퀸즐랜드 (브리즈번, 골드코스트)", next: "eng_type", val: "QLD" },
-                    { label: "기타 지역 (퍼스, 애들레이드, 캔버라)", next: "eng_type", val: "OTHER" },
-                    { label: "상관없음 (최적의 학교 위주로 추천)", next: "eng_type", val: "ANY" }
-                ],
-                key: "region"
+                    { label: "고등학교 졸업(예정)", val: "hs" },
+                    { label: "대학 재학·휴학 중", val: "uni_current" },
+                    { label: "대학 졸업(예정)", val: "uni_grad" },
+                    { label: "직장인·경력자", val: "worker" }
+                ]
             },
-            "eng_type": {
-                question: "현재 보유하고 계신 공인 영어 시험 종류를 선택해 주세요.",
+            "a_goal": {
+                question: "캐나다 유학에서 가장 중요한 목표는 무엇인가요?",
+                key: "goal",
                 options: [
-                    { label: "IELTS (아이엘츠)", next: "eng_score_ielts" },
-                    { label: "Pearson PTE", next: "eng_score_pte" },
-                    { label: "TOEFL iBT (토플)", next: "eng_score_toefl" },
-                    { label: "아직 준비 전입니다", next: "grades", saveVal: "준비 전 (성적 없음)" }
-                ],
-                key: null // handled manually
+                    { label: "캐나다 취업과 영주권까지", val: "settle" },
+                    { label: "해외 경력을 쌓고 귀국", val: "experience" },
+                    { label: "아직 탐색 중이에요", val: "explore" }
+                ]
             },
-            "eng_score_ielts": {
-                question: "IELTS(Academic) 점수대를 선택해 주세요.",
+            "a_major": {
+                question: "관심 있는 전공 분야를 선택해 주세요.",
+                key: "majorCat",
+                options: CANADA_DATA.major_categories.map(m => ({ label: m.name_ko, val: m.id }))
+                    .concat([{ label: "잘 모르겠어요", val: "unsure" }])
+            },
+            "a_env": {
+                question: "어떤 유학 환경을 선호하세요?",
+                key: "env",
                 options: [
-                    { label: "IELTS 7.0 이상", next: "grades" },
-                    { label: "IELTS 6.5", next: "grades" },
-                    { label: "IELTS 6.0", next: "grades" },
-                    { label: "IELTS 5.5 이하", next: "grades" }
-                ],
-                key: "english"
+                    { label: "대도시 인프라 (토론토·밴쿠버)", val: "metro" },
+                    { label: "이민에 유리하고 생활비를 아끼는 지역", val: "settle_friendly" },
+                    { label: "상관없음", val: "any" }
+                ]
             },
-            "eng_score_pte": {
-                question: "PTE(Academic) 점수대를 선택해 주세요.",
+            "a_budget": {
+                question: "연간 예산(학비+생활비)은 어느 정도인가요?",
+                key: "budget",
                 options: [
-                    { label: "PTE 65점 이상", next: "grades" },
-                    { label: "PTE 58~64점", next: "grades" },
-                    { label: "PTE 50~57점", next: "grades" },
-                    { label: "PTE 49점 이하", next: "grades" }
-                ],
-                key: "english"
+                    { label: "3천만 원 이하", val: "low" },
+                    { label: "3천만~5천만 원", val: "mid" },
+                    { label: "5천만 원 이상", val: "high" }
+                ]
             },
-            "eng_score_toefl": {
-                question: "TOEFL iBT 점수대를 선택해 주세요.",
+            "a_english": {
+                question: "공인 영어 성적(IELTS 기준)은 어느 정도인가요?",
+                key: "english",
                 options: [
-                    { label: "TOEFL 94점 이상", next: "grades" },
-                    { label: "TOEFL 79~93점", next: "grades" },
-                    { label: "TOEFL 60~78점", next: "grades" },
-                    { label: "TOEFL 59점 이하", next: "grades" }
-                ],
-                key: "english"
+                    { label: "IELTS 6.0 이상", val: "ok" },
+                    { label: "IELTS 5.5 수준", val: "mid" },
+                    { label: "아직 없어요", val: "none" }
+                ]
             },
-            "grades": {
-                question: "최종 학력 및 성적(고교 내신 또는 수능)은 어느 정도이신가요?",
+            "b_status": {
+                question: "현재 상태를 알려주세요.",
+                key: "status",
                 options: [
-                    { label: "고교 1~3등급 / 수능 330점 이상", next: "major" },
-                    { label: "고교 4~5등급 / 수능 보통 수준", next: "major" },
-                    { label: "고교 6등급 이하 / 검정고시 졸업", next: "major" },
-                    { label: "대학교 재학/휴학/졸업자", next: "major" }
-                ],
-                key: "grades"
+                    { label: "고3 · 고교 졸업", val: "hs" },
+                    { label: "대학 재학·휴학 중", val: "uni_current" },
+                    { label: "대학 졸업", val: "uni_grad" }
+                ]
             },
-            "grades_master": {
-                question: "학부(학사) 성적은 어느 정도이신가요?",
+            "b_region": {
+                question: "목표 대학 지역이 있나요?",
+                key: "bRegion",
                 options: [
-                    { label: "학점 3.5 / 4.5 이상 (상위권)", next: "major" },
-                    { label: "학점 3.0 ~ 3.5", next: "major" },
-                    { label: "학점 3.0 미만", next: "major" },
-                    { label: "졸업예정자 / 전공 변경 희망", next: "major" }
-                ],
-                key: "grades"
+                    { label: "BC — UBC · SFU 등", val: "bc" },
+                    { label: "온타리오 — 토론토대 등", val: "ontario" },
+                    { label: "아직 미정이에요", val: "undecided" }
+                ]
             },
-            "major": {
-                question: "호주 유학 시 가장 희망하는 전공 분야를 선택해 주십시오.",
-                options: Object.keys(majorData).map(m => ({ label: m, next: "target" })),
-                key: "major"
-            },
-            "target": {
-                question: "호주 유학의 가장 핵심적인 목표는 무엇입니까?",
+            "b_field": {
+                question: "희망하는 전공 계열을 선택해 주세요.",
+                key: "bField",
                 options: [
-                    { label: "Go8(호주 명문대) 위주 진학", next: "END" },
-                    { label: "현지 취업 및 영주권 취득", next: "END" },
-                    { label: "가성비 및 실무 중심 학위", next: "END" },
-                    { label: "귀국 후 전문직 면허 취득", next: "END" }
-                ],
-                key: "target"
+                    { label: "상경 계열", val: "biz" },
+                    { label: "이공 계열", val: "stem" },
+                    { label: "인문·사회 계열", val: "humanities" },
+                    { label: "예술 계열", val: "arts" },
+                    { label: "아직 미정이에요", val: "undecided" }
+                ]
+            },
+            "b_budget": {
+                question: "연간 예산(학비+생활비)은 어느 정도인가요?",
+                key: "budget",
+                options: [
+                    { label: "3천만 원 이하", val: "low" },
+                    { label: "3천만~5천만 원", val: "mid" },
+                    { label: "5천만 원 이상", val: "high" }
+                ]
             }
         };
+
+        const flows = {
+            career: { steps: ["a_status", "a_goal", "a_major", "a_env", "a_budget", "a_english"], chip: '<i class="fa-solid fa-briefcase"></i> 커리어·이민 트랙' },
+            transfer: { steps: ["b_status", "b_region", "b_field", "b_budget"], chip: '<i class="fa-solid fa-graduation-cap"></i> 대학 편입 트랙' }
+        };
+
+        function emptyProfile(track) {
+            return { track: track, status: "", goal: "", majorCat: "", env: "", budget: "", english: "", bRegion: "", bField: "" };
+        }
+
+        function labelOf(stepId, val) {
+            const opt = questionFlow[stepId].options.find(o => o.val === val);
+            return opt ? opt.label : "-";
+        }
+
+        let userProfile = emptyProfile("career");
+        let stepIndex = 0;
+        let stepHistory = []; // 뒤로가기용 스냅샷 스택 {stepIndex, profile}
 
         // ============================================================
         // Flow control
         // ============================================================
-        function startConsulting(degreeLabel) {
-            // 새 진단 시작: 프로필과 히스토리 초기화
-            userProfile = { degree: degreeLabel, region: "", regionCode: "ANY", english: "", grades: "", major: "", target: "" };
-            currentStepId = "region";
-            stepCount = 1;
+        function startConsulting(track) {
+            userProfile = emptyProfile(track);
+            stepIndex = 0;
             stepHistory = [];
 
-            const isMaster = degreeLabel.includes('석사');
-            const chip = document.getElementById('track-chip');
-            chip.innerHTML = isMaster
-                ? '<i class="fa-solid fa-user-tie"></i> 석사 (Master) 트랙'
-                : '<i class="fa-solid fa-graduation-cap"></i> 학부 (Bachelor) 트랙';
+            document.getElementById('track-chip').innerHTML = flows[track].chip;
 
             document.getElementById('hero-section').classList.add('hidden');
+            document.getElementById('result-hero').classList.add('hidden');
+            document.getElementById('result-details').classList.add('hidden');
+            document.getElementById('policy-2026').classList.add('hidden');
             document.getElementById('consulting-section').classList.remove('hidden');
             document.getElementById('consulting-section').classList.add('fade-in-up');
+            history.replaceState(null, '', location.pathname);
             window.scrollTo(0, 0);
             renderQuestion();
         }
@@ -778,29 +922,31 @@
                 // 첫 질문에서 뒤로가기: 히어로(트랙 선택)로 복귀
                 document.getElementById('consulting-section').classList.add('hidden');
                 document.getElementById('hero-section').classList.remove('hidden');
+                document.getElementById('policy-2026').classList.remove('hidden');
                 window.scrollTo(0, 0);
                 return;
             }
             const prev = stepHistory.pop();
-            currentStepId = prev.stepId;
-            stepCount = prev.stepCount;
+            stepIndex = prev.stepIndex;
             userProfile = Object.assign({}, prev.profile);
             renderQuestion();
         }
 
         function renderQuestion() {
-            const q = questionFlow[currentStepId];
-            document.getElementById('step-indicator').innerText = `Step ${stepCount}`;
+            const flow = flows[userProfile.track];
+            const stepId = flow.steps[stepIndex];
+            const q = questionFlow[stepId];
+            document.getElementById('step-indicator').innerText = `Step ${stepIndex + 1}`;
             document.getElementById('question-text').innerText = q.question;
 
-            const progress = (stepCount / totalEstimatedSteps) * 100;
+            const progress = ((stepIndex + 1) / flow.steps.length) * 100;
             document.getElementById('progress-bar').style.width = `${progress > 100 ? 100 : progress}%`;
 
             const grid = document.getElementById('options-grid');
             grid.innerHTML = '';
 
             q.options.forEach((opt, index) => {
-                const delay = index * 100;
+                const delay = index * 60;
                 const div = document.createElement('div');
                 div.className = `option-card fade-in-up`;
                 div.style.animationDelay = `${delay}ms`;
@@ -812,113 +958,60 @@
 
         function handleAnswer(selectedOption, stateKey) {
             // 뒤로가기용 스냅샷 저장 (값 변경 전 상태)
-            stepHistory.push({ stepId: currentStepId, stepCount: stepCount, profile: Object.assign({}, userProfile) });
+            stepHistory.push({ stepIndex: stepIndex, profile: Object.assign({}, userProfile) });
 
-            // Save data
-            if (stateKey) {
-                userProfile[stateKey] = selectedOption.label;
-                if (stateKey === "region" && selectedOption.val) {
-                    userProfile.regionCode = selectedOption.val;
-                }
-            } else if (currentStepId === "eng_type" && selectedOption.saveVal) {
-                userProfile.english = selectedOption.saveVal;
-            }
+            userProfile[stateKey] = selectedOption.val;
 
-            if (selectedOption.next === "END") {
+            const flow = flows[userProfile.track];
+            if (stepIndex >= flow.steps.length - 1) {
                 document.getElementById('progress-bar').style.width = `100%`;
                 setTimeout(generateReport, 300);
             } else {
-                let next = selectedOption.next;
-                // 석사 트랙은 학부 성적 대신 학사 학점을 묻는다
-                if (next === "grades" && userProfile.degree.includes("석사")) {
-                    next = "grades_master";
-                }
-                currentStepId = next;
-                if (currentStepId !== "eng_score_ielts" && currentStepId !== "eng_score_pte" && currentStepId !== "eng_score_toefl") {
-                    stepCount++; // Only increment step for main logical advances
-                }
+                stepIndex++;
                 renderQuestion();
             }
         }
 
         // ============================================================
-        // 진학 경로 가이드 (학부: 파운데이션/디플로마/다이렉트, 석사: 직행/GC/GE)
+        // 진학 경로 가이드 (디플로마 직행 / 포스트그래듀에이트 / 대학 편입)
         // ============================================================
-        const pathwayGuides = {
-            bachelor: [
-                {
-                    key: "Foundation",
-                    title: "파운데이션",
-                    en: "Foundation (대학예비과정)",
-                    icon: "fa-seedling",
-                    target: "내신·영어가 부족하지만 명문대 1학년 진학을 원하는 고교 졸업(예정)자. 내신 4~6등급, 낮은 IELTS도 지원 가능합니다.",
-                    steps: ["고교 졸업 후 파운데이션 지원", "대학 부설 기관에서 8개월~1년, 영어+전공 기초 이수", "조건 충족 시 본교 정규 1학년 진학"],
-                    pros: "국내 성적이 아쉬워도 과정 성적으로 재도전할 수 있고, G8 포함 상위권 대학 진학 사례가 많습니다. 전공 제한이 있는 학과도 우회 진입이 가능합니다.",
-                    caution: "모든 과정이 '보장 입학'을 제공하지는 않으며, 대학·전공별 요구 성적이 다릅니다."
-                },
-                {
-                    key: "Diploma",
-                    title: "디플로마 편입",
-                    en: "Diploma Transfer",
-                    icon: "fa-forward",
-                    target: "파운데이션보다 빠른 진학을 원하거나, 내신·영어(IELTS 5.5 이상)가 일정 수준 이상인 학생.",
-                    steps: ["고교 졸업 후 디플로마 지원", "학부 1학년 과목 중심으로 8개월~1년 이수 (본교와 동일 커리큘럼)", "성적 기준 충족 시 본교 2학년으로 편입"],
-                    pros: "1학년 과정을 대체해 최대 1년을 단축하고 학비도 절감됩니다. 본교와 같은 방식의 수업이라 대학 생활 적응이 쉽습니다.",
-                    caution: "학교·전공별 편입 인정 범위가 다르고, 기준 학점(GPA 60~70%) 미달 시 2학년 진학이 불가합니다."
-                },
-                {
-                    key: "Direct",
-                    title: "다이렉트 입학",
-                    en: "Direct Entry",
-                    icon: "fa-bolt",
-                    target: "고교 내신·수능·영어 성적이 대학 입학 기준을 충족하는 학생. 수능 점수로 바로 지원할 수 있습니다.",
-                    steps: ["내신·수능·영어 성적으로 대학에 직접 지원", "조건부(Conditional) 또는 무조건부(Unconditional) 입학 허가 수령", "CoE 발급 → 학생비자 신청 → 학부 1학년 진학"],
-                    pros: "별도 준비 과정 없이 시간과 비용을 아낄 수 있고, 수능·내신·검정고시 등 국내 성적 활용 폭이 넓습니다.",
-                    caution: "대학별 필수 과목·최소 성적 기준이 다르며, 영어 미달 시 조건부 오퍼로 진행됩니다."
-                }
-            ],
-            master: [
-                {
-                    key: "Master Direct",
-                    title: "석사 직행",
-                    en: "Master Direct Entry",
-                    icon: "fa-bolt",
-                    target: "학사 학위와 학점·영어 요건을 충족하는 지원자. 관련 전공 학사면 바로 지원 가능합니다.",
-                    steps: ["영문 성적표·SOP·이력서 등 서류 준비 후 지원", "조건부/무조건부 입학 허가 수령", "CoE 발급 → 학생비자 신청 → 석사 과정 입학"],
-                    pros: "1~2년 만에 글로벌 인지도 높은 학위를 취득하는 최단 경로입니다. 졸업생 비자(485)와 영주권 점수 확보로 이어집니다.",
-                    caution: "대학·전공별 GPA와 선수과목 요건이 다르며, 일부 과정은 연구계획서가 필요합니다."
-                },
-                {
-                    key: "Graduate Certificate",
-                    title: "GC 패스웨이",
-                    en: "Graduate Certificate → Master",
-                    icon: "fa-stairs",
-                    target: "학부 성적(GPA)이 석사 직행 기준에 다소 부족한 지원자를 위한 안전한 우회 경로입니다.",
-                    steps: ["Graduate Certificate(6개월) 과정으로 입학", "GC 과정을 우수한 성적으로 이수", "석사 본과정 진입 (이수 학점 인정)"],
-                    pros: "입학 문턱이 낮고, GC에서 이수한 학점이 석사 과정에 그대로 인정되어 총 기간 손해가 거의 없습니다.",
-                    caution: "GC 과정 성적이 기준에 미달하면 석사 본과정 진입이 제한될 수 있습니다."
-                },
-                {
-                    key: "GE",
-                    title: "GE 커리어 전환",
-                    en: "Graduate Entry",
-                    icon: "fa-arrows-rotate",
-                    target: "전공과 무관한 학사 소지자, 커리어 전환을 원하는 직장인. 간호·IT 등 전문직 분야에서 특히 활발합니다.",
-                    steps: ["비전공 학사 학위로 GE/전환형 석사 지원", "2년 전환형 과정 이수 (실습 포함)", "전문 자격·면허 취득 → 현지 취업·영주권 연계"],
-                    pros: "전공 배경 없이도 2년 만에 새로운 전문 분야의 학위와 자격을 취득해 영주권 신청까지 연결됩니다.",
-                    caution: "일부 과정은 해부생리 등 선수과목이나 실습 요건이 있어 사전 확인이 필요합니다."
-                }
-            ]
-        };
+        const pathwayGuides = [
+            {
+                key: "diploma",
+                title: "디플로마 직행",
+                en: "College Diploma (2년)",
+                icon: "fa-briefcase",
+                target: "고교 졸업(예정)자, 실무 커리어로 빠르게 진입하고 싶은 분. 공립 컬리지 2년 디플로마로 취업과 이민까지 노리는 대표 경로입니다.",
+                steps: ["공립 컬리지 디플로마 입학 (PAL 필수)", "디플로마 2년 이수 → 취업허가(PGWP) 최대 3년", "현지 경력 12개월 → EE·PNP 이민 검토"],
+                pros: "학비가 대학보다 낮고 실무 중심이라 취업 연결이 빠릅니다. 적격 전공이라면 졸업 후 최대 3년의 취업허가를 받을 수 있습니다.",
+                caution: "비학위 과정은 적격 전공(6개 섹터)만 PGWP가 가능합니다. 전공별 CIP 코드 확인이 필수입니다."
+            },
+            {
+                key: "postgrad",
+                title: "포스트그래듀에이트",
+                en: "Post-Graduate Certificate (1~2년)",
+                icon: "fa-user-tie",
+                target: "국내 대학 졸업자·직장인. 보유한 학사 학위 위에 1~2년 실무 과정을 더해 커리어를 전환하는 경로입니다.",
+                steps: ["학사 학위로 포스트그래듀에이트 과정 지원", "1~2년 이수 (실무·인턴십 중심) → PGWP(적격 전공)", "현지 취업 → 경력 기반 이민 검토"],
+                pros: "기간이 짧아 비용 부담이 적고, 기존 학위·경력과 결합해 취업 경쟁력을 높일 수 있습니다.",
+                caution: "서티피킷도 비학위 과정이므로 PGWP 전공 제한이 동일하게 적용됩니다."
+            },
+            {
+                key: "transfer",
+                title: "컬리지 → 대학 편입",
+                en: "University Transfer (2+2년)",
+                icon: "fa-stairs",
+                target: "명문대 학위가 목표지만 학비·성적 부담이 있는 분. 컬리지 2년 이수 후 대학 3학년으로 편입합니다.",
+                steps: ["편입 특화 컬리지 입학 (BC 트랜스퍼 등)", "2년 이수 후 대학 편입 (UBC·SFU·토론토대 등)", "학사 취득 → PGWP 최대 3년 (전공 제한 없음)"],
+                pros: "대학 4년 대비 학비를 크게 아끼고, 학위 과정이라 PGWP 전공 제한을 받지 않습니다.",
+                caution: "편입은 컬리지 성적(GPA)이 좌우합니다. 대학·전공별 편입 요건 확인이 필요합니다."
+            }
+        ];
 
-        function renderPathwayGuide(isMaster, pathwayName) {
-            const guides = isMaster ? pathwayGuides.master : pathwayGuides.bachelor;
-            document.getElementById('pathway-guide-sub').innerText = isMaster
-                ? "같은 석사 진학이라도 학점과 전공 배경에 따라 최적의 경로는 다릅니다. edm유학센터가 세 가지 경로를 비교해 드립니다."
-                : "같은 목표라도 성적과 상황에 따라 최적의 경로는 다릅니다. edm유학센터가 세 가지 진학 경로를 비교해 드립니다.";
+        function renderPathwayGuide(routeKey) {
             const grid = document.getElementById('pathway-guide-grid');
-            grid.innerHTML = guides.map(g => {
-                const isMine = pathwayName.includes(g.key);
+            grid.innerHTML = pathwayGuides.map(g => {
+                const isMine = g.key === routeKey;
                 return `
                 <div class="apple-card-flat flex flex-col h-full ${isMine ? 'ring-2 ring-[#6CB640]' : 'border border-gray-200'}" style="border-radius:12px;">
                     ${isMine ? '<span class="region-badge mb-4 self-start"><i class="fa-solid fa-location-dot"></i> 내 추천 경로</span>' : '<span class="mb-4" style="height:24px;"></span>'}
@@ -938,180 +1031,342 @@
         }
 
         // ============================================================
-        // Pathway logic (학부 / 석사 분기)
+        // 추천 로직 (BUILD_SPEC 6절)
         // ============================================================
-        function getPathwayLogic() {
-            let pathwayName = "";
-            let reason = "";
-            const grades = userProfile.grades || "";
-            const major = userProfile.major || "";
-            const isMaster = userProfile.degree.includes("석사");
+        const ADJACENT_MAJOR = { business: "it", hospitality: "culinary", media_arts: "engineering_tech" };
+        const STRENGTH_KEYWORDS = {
+            culinary: ["조리", "Culinary"],
+            media_arts: ["애니메이션", "디자인"],
+            agriculture: ["농업"],
+            trades: ["자동차"]
+        };
 
-            if (isMaster) {
-                if (major === "의대/의전원 (Medicine)") {
-                    pathwayName = "Graduate Entry MD Pathway";
-                    reason = "학사 학위를 기반으로 GAMSAT/MCAT 응시 후 4년 의학전문(MD) 과정에 지원하는 경로입니다. GPA·적성시험·인터뷰를 종합 평가하므로 1년 이상의 전략적 준비를 권장합니다.";
-                } else if (grades.includes("전공 변경") || major.includes("간호")) {
-                    pathwayName = "Graduate Entry (GE) 커리어 전환";
-                    reason = "비전공 학사 소지자도 지원 가능한 GE/전환형 석사 과정입니다. 2년 만에 새로운 전문 분야의 학위와 자격을 취득하여 호주 현지 취업 및 영주권 신청으로 연결할 수 있습니다.";
-                } else if (grades.includes("3.0 미만")) {
-                    pathwayName = "Graduate Certificate → Master 패스웨이";
-                    reason = "학부 성적이 석사 직행 요건에 다소 부족한 경우, Graduate Certificate(6개월) 과정을 우수하게 이수한 뒤 석사 본과정으로 진입하는 안전한 우회 경로를 권장합니다.";
-                } else {
-                    pathwayName = "Master Direct Entry (석사 직행)";
-                    reason = "보유하신 학사 학위와 성적으로 호주 명문대 석사 과정에 직접 지원할 수 있습니다. 영어 성적 확보 시 바로 지원 가능하며, 조건부 입학(Conditional Offer)도 활용할 수 있습니다.";
+        // 전공 미정(unsure) 시 목표·상태 기반 자동 배정
+        function resolveMajorCat(p) {
+            if (p.majorCat && p.majorCat !== "unsure") return { id: p.majorCat, autoNote: null };
+            if (p.goal === "settle") {
+                if (p.status === "uni_grad" || p.status === "worker") {
+                    return { id: "health", autoNote: "전공을 아직 정하지 않으셨다면, 대졸·경력자에게는 1~2년 포스트그래듀에이트로 진입할 수 있는 보건·IT 분야를 우선 추천합니다." };
                 }
-                return { name: pathwayName, reason: reason };
+                return { id: "trades", autoNote: "전공을 아직 정하지 않으셨다면, 취업·이민 목표에는 기술직(트레이드)·보건 디플로마가 가장 확실한 선택지입니다." };
+            }
+            return { id: "it", autoNote: "전공을 아직 정하지 않으셨다면, 취업 수요가 넓은 IT·엔지니어링 테크·보건 분야부터 검토해 보시길 추천합니다." };
+        }
+
+        // 권역 점수제 (동점 시 앞선 순서 우선)
+        function scoreRegions(p, majorId) {
+            const order = ["ontario", "bc", "alberta", "prairies", "atlantic"];
+            const score = { ontario: 2, bc: 2, alberta: 1, prairies: 1, atlantic: 1 };
+
+            if (p.env === "metro") { score.ontario += 2; score.bc += 2; }
+            if (p.env === "settle_friendly") { score.prairies += 2; score.atlantic += 2; score.alberta += 1; }
+
+            if (p.budget === "low") { score.atlantic += 2; score.prairies += 2; score.ontario -= 1; score.bc -= 2; }
+            if (p.budget === "high") { score.ontario += 1; score.bc += 1; }
+
+            if (majorId === "trades" || majorId === "culinary") { score.alberta += 2; }
+            if (majorId === "it") { score.ontario += 1; score.bc += 1; }
+            if (majorId === "agriculture") { score.alberta += 2; }
+
+            return order.slice().sort((a, b) => score[b] - score[a] || order.indexOf(a) - order.indexOf(b)).slice(0, 2);
+        }
+
+        const TIER_SCORE = { core: 3, major: 2, secondary: 1, special: 0 };
+
+        // 컬리지 선정: strength 일치 최우선(전 권역), 이후 선택 권역 tier 순 교차 선발
+        function pickColleges(regionIds, majorId) {
+            const kws = STRENGTH_KEYWORDS[majorId] || [];
+            const picks = [];
+            const added = new Set();
+
+            if (kws.length) {
+                CANADA_DATA.regions.forEach(r => r.colleges.forEach(c => {
+                    if (c.strength && kws.some(k => c.strength.includes(k)) && !added.has(c.name)) {
+                        picks.push(Object.assign({}, c, { regionId: r.id, _badge: "전공 특화" }));
+                        added.add(c.name);
+                    }
+                }));
             }
 
-            // ---------- 학부 트랙 ----------
-            if (major === "의대/의전원 (Medicine)") {
-                if (grades.includes("1~3등급")) {
-                    pathwayName = "Direct Entry (의대 직행)";
-                    reason = "최상위권 성적으로 호주 의대 1학년 직행이 가능합니다. ISAT/UCAT 및 인터뷰를 철저히 대비하십시오.";
-                } else {
-                    pathwayName = "Biomedical Science Pathway";
-                    reason = "의대 다이렉트 입학 요건이 부족할 경우, Biomedical(의생명과학) 학사 이수 후 의전원(Doctor of Medicine)으로 진학하는 우회 경로가 가장 안전합니다.";
+            // 선택 권역별 tier 정렬 목록을 만들어 교차로 채운다
+            const perRegion = regionIds.map(rid =>
+                REGIONS[rid].colleges
+                    .filter(c => c.market_tier !== "special" && !added.has(c.name))
+                    .slice()
+                    .sort((a, b) => TIER_SCORE[b.market_tier] - TIER_SCORE[a.market_tier])
+            );
+            let i = 0;
+            while (picks.length < 3) {
+                let pushed = false;
+                for (const rlist of perRegion) {
+                    if (picks.length >= 3) break;
+                    if (rlist[i]) {
+                        const c = rlist[i];
+                        if (!added.has(c.name)) {
+                            picks.push(Object.assign({}, c, { regionId: regionIds[perRegion.indexOf(rlist)] }));
+                            added.add(c.name);
+                            pushed = true;
+                        }
+                    }
                 }
-            } else if (grades.includes("6등급") || grades.includes("4~5등급")) {
-                if (major.includes("간호") || major.includes("IT") || major.includes("호텔") || major.includes("공학")) {
-                    pathwayName = "Diploma Transfer (디플로마 편입)";
-                    reason = "고교 성적이 부족해도 호주 명문대 산하 디플로마(1년) 과정을 이수하면 본교 2학년으로 편입이 보장됩니다. 시간과 비용을 절약하는 최적의 방법입니다.";
-                } else {
-                    pathwayName = "Foundation Pathway (파운데이션)";
-                    reason = "해당 전공 및 명문대 진학을 위해 학력 조건과 영어 기초를 탄탄히 다지는 파운데이션(대학예비과정) 이수 후 1학년으로 진학하는 경로를 권장합니다.";
-                }
-            } else if (grades.includes("대학교 재학")) {
-                if (major.includes("간호")) {
-                    pathwayName = "Graduate Entry (GE) 과정";
-                    reason = "비전공 학사 소지자도 간호학 학사를 2년 만에 취득할 수 있는 GE 과정을 통해 빠른 면허 취득 및 영주권 신청이 가능합니다.";
-                } else {
-                    pathwayName = "Direct Entry / 학점 인정 편입";
-                    reason = "보유하신 대학 학점을 인정받아 호주 대학교 1학년 입학 또는 편입을 통해 유학 기간을 단축할 수 있습니다.";
-                }
+                if (!pushed) break;
+                i++;
+            }
+            return picks.slice(0, 3);
+        }
+
+        // 트랙 B 컬리지 선정
+        function pickTransferColleges(p) {
+            const byName = (rid, name) => {
+                const c = REGIONS[rid].colleges.find(x => x.name.includes(name));
+                return c ? Object.assign({}, c, { regionId: rid }) : null;
+            };
+            let picks;
+            if (p.bRegion === "ontario") {
+                picks = [byName("ontario", "Seneca"), byName("ontario", "Humber"), byName("ontario", "Sheridan")];
             } else {
-                pathwayName = "Direct Entry (1학년 직행)";
-                reason = "우수한 성적을 바탕으로 호주 대학교 1학년에 직접 지원할 수 있는 완벽한 조건을 갖추고 있습니다.";
+                picks = [byName("bc", "Langara"), byName("bc", "Douglas"), byName("bc", "Camosun")];
             }
-            return { name: pathwayName, reason: reason };
+            picks = picks.filter(Boolean);
+            if (p.budget === "low") {
+                const alt = byName("atlantic", "College of the North Atlantic");
+                if (alt) { alt._badge = "학비 절약 대안"; picks.push(alt); }
+            }
+            return picks;
         }
 
         // ============================================================
         // Report
         // ============================================================
+        const PGWP_BADGES = {
+            eligible: '<span class="region-badge"><i class="fa-solid fa-circle-check"></i> PGWP 가능</span>',
+            conditional: '<span class="region-badge badge-warn"><i class="fa-solid fa-triangle-exclamation"></i> 조건부 확인</span>',
+            not_eligible: '<span class="region-badge badge-stop"><i class="fa-solid fa-circle-xmark"></i> PGWP 불가(비학위)</span>',
+            mostly_not_eligible: '<span class="region-badge badge-stop"><i class="fa-solid fa-circle-xmark"></i> PGWP 불가(비학위)</span>'
+        };
+
+        function collegeCard(c) {
+            const region = REGIONS[c.regionId];
+            const typeLabel = TYPE_LABELS[c.type] || "컬리지";
+            const tuition = c.tuition_intl === null ? "상담 시 안내" : c.tuition_intl;
+            const subLine = c.strength ? "강점: " + c.strength : region.name_ko + " " + (TIER_LABELS[c.market_tier] || "추천") + " 컬리지";
+            return `
+                <div class="apple-card flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-start justify-between mb-2 gap-2">
+                            <h4 class="sf-display-card-bold text-[#1d1d1f]">${c.name}</h4>
+                            <span class="text-[11px] font-bold text-gray-400 bg-gray-100 rounded-full px-2.5 py-1 whitespace-nowrap mt-1">${REGION_SHORT[c.regionId]}</span>
+                        </div>
+                        ${c._badge ? `<span class="region-badge mb-3"><i class="fa-solid fa-star"></i> ${c._badge}</span>` : ''}
+                        <p class="text-xs text-apple-blue font-semibold mb-4 mt-2 uppercase tracking-wider">${typeLabel} · ${c.city}</p>
+                        <p class="sf-text-caption text-gray-500 mb-6 font-semibold uppercase tracking-wide">${subLine}</p>
+
+                        <div class="bg-[#fafafc] rounded-[8px] p-4 mb-8 space-y-3">
+                            <div class="flex justify-between sf-text-caption border-b border-gray-100 pb-2">
+                                <span class="text-gray-500">권역</span>
+                                <strong class="text-[#1d1d1f] text-right w-1/2">${region.name_ko}</strong>
+                            </div>
+                            <div class="flex justify-between sf-text-caption border-b border-gray-100 pb-2">
+                                <span class="text-gray-500">권역 특성</span>
+                                <strong class="text-[#1d1d1f] text-right w-1/2">${region.tags[0]}</strong>
+                            </div>
+                            <div class="flex justify-between sf-text-caption pt-1">
+                                <span class="text-gray-500">연간 학비 <span class="text-gray-400">(2026 국제학생)</span></span>
+                                <strong class="text-[#1d1d1f] text-orange-600">${tuition}</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="${BRAND_CONFIG.consultUrl}" target="_blank" class="apple-link-pill light-bg w-full text-center mt-auto">
+                        1:1 상담으로 자세히 보기 <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-2"></i>
+                    </a>
+                </div>
+            `;
+        }
+
+        function renderSummary(items) {
+            document.getElementById('profile-summary').innerHTML = items.map(it => `
+                <div class="flex flex-col items-center"><span class="text-xs uppercase tracking-widest text-gray-500 mb-1">${it[0]}</span> <strong class="text-apple-dark-surface">${it[1]}</strong></div>
+            `).join('');
+        }
+
+        // 경고 카드의 "인접 적격 전공 보기": 전공만 교체해 리포트 재생성
+        function switchMajor(altId) {
+            userProfile.majorCat = altId;
+            generateReport();
+        }
+
         function generateReport() {
             document.getElementById('hero-section').classList.add('hidden');
             document.getElementById('consulting-section').classList.add('hidden');
             document.getElementById('result-hero').classList.remove('hidden');
             document.getElementById('result-details').classList.remove('hidden');
+            document.getElementById('policy-2026').classList.remove('hidden');
             window.scrollTo(0, 0);
 
-            const isMaster = userProfile.degree.includes("석사");
-            const pathwayData = getPathwayLogic();
-            const majorInfo = majorData[userProfile.major] || majorData["간호학과 (Nursing)"];
-
-            // Populate Hero
-            document.getElementById('result-pathway-title').innerText = pathwayData.name;
-            document.getElementById('result-pathway-desc').innerText = pathwayData.reason;
-
-            // Populate Summary
-            document.getElementById('sum-degree').innerText = isMaster ? "석사 (Master)" : "학부 (Bachelor)";
-            document.getElementById('sum-region').innerText = (userProfile.region || "상관없음").split('(')[0].trim();
-            document.getElementById('sum-eng').innerText = userProfile.english.split(' ')[0] || "준비 중";
-            document.getElementById('sum-gpa').innerText = userProfile.grades.split('/')[0].trim() || "-";
-            document.getElementById('sum-major').innerText = userProfile.major.split('(')[0].trim() || "-";
-
-            // Populate Recommended Major
-            document.getElementById('rec-major-title').innerText = userProfile.major + (isMaster ? " · 석사 과정" : " · 학부 과정");
-            document.getElementById('rec-major-desc').innerText = (isMaster && majorInfo.masterDesc) ? majorInfo.masterDesc : majorInfo.desc;
-
-            // Pathway Guide (파운데이션/디플로마/다이렉트 · 석사 3경로)
-            renderPathwayGuide(isMaster, pathwayData.name);
-
-            // Region-aware university sorting
-            const regionCode = userProfile.regionCode || "ANY";
-            let schools = (isMaster && majorInfo.masterSchools) ? [...majorInfo.masterSchools] : [...majorInfo.schools];
-            let matchedCount = 0;
-            if (regionCode !== "ANY" && regionCode !== "OTHER") {
-                schools.sort((a, b) => (b.state === regionCode) - (a.state === regionCode));
-                matchedCount = schools.filter(s => s.state === regionCode).length;
+            if (userProfile.track === "transfer") {
+                generateTransferReport();
+            } else {
+                generateCareerReport();
             }
 
-            // Region note
-            const noteEl = document.getElementById('region-note');
-            if (regionCode === "OTHER") {
-                noteEl.innerText = "※ 퍼스·애들레이드·캔버라 지역의 " + userProfile.major.split('(')[0].trim() + " 프로그램은 전문가 상담 시 맞춤 안내해 드립니다. 아래는 대표 추천 프로그램입니다.";
+            // 결과 공유용 해시 갱신 (주소창 URL 자체가 공유 링크가 된다)
+            history.replaceState(null, '', '#r=' + encodeProfile(userProfile));
+        }
+
+        // ---------- 트랙 A: 커리어·이민 ----------
+        function generateCareerReport() {
+            const p = userProfile;
+            const resolved = resolveMajorCat(p);
+            const major = MAJORS[resolved.id];
+            const pgwp = major.pgwp_non_degree;
+            const isPostgrad = p.status === "uni_grad" || p.status === "worker";
+            const routeKey = isPostgrad ? "postgrad" : "diploma";
+
+            // Hero title/desc
+            let title, desc;
+            if (pgwp === "not_eligible" || pgwp === "mostly_not_eligible") {
+                title = major.name_ko + " 경로, 재설계가 필요합니다";
+                desc = "선택하신 " + major.name_ko + " 분야의 컬리지 디플로마는 2026년 기준 졸업 후 취업허가(PGWP) 대상이 아닙니다. 하지만 경로를 바꾸면 목표는 유효합니다. 아래 추천 전공 카드에서 대안 경로를 확인해 주세요.";
+            } else {
+                title = major.name_ko + (isPostgrad ? " 포스트그래듀에이트 경로" : " 커리어·이민 경로");
+                desc = major.name_ko + " 분야는 2026년 기준 비학위 과정 PGWP 적격 섹터(" + major.sector + ")에 해당합니다. "
+                    + (isPostgrad
+                        ? "보유하신 학사 학위 위에 1~2년 포스트그래듀에이트 과정을 더해 취업허가와 현지 커리어로 연결하는 경로를 추천합니다."
+                        : "공립 컬리지 디플로마 2년 → 취업허가(PGWP) 최대 3년 → 경력 12개월 → 이민 검토로 이어지는 경로를 추천합니다.");
+                if (pgwp === "conditional") {
+                    desc += " 다만 이 분야는 프로그램별로 적격 여부가 갈리는 조건부 분야이므로, 지원 전 CIP 코드 확인이 꼭 필요합니다.";
+                }
+                if (major.immigration_note) desc += " (" + major.immigration_note + ")";
+            }
+            if (p.english === "none" || p.english === "mid") {
+                desc += " 공인 영어 성적이 아직 부족하다면, 어학연수·패스웨이 과정을 병행해 입학 요건을 맞출 수 있습니다.";
+            }
+            document.getElementById('result-pathway-title').innerText = title;
+            document.getElementById('result-pathway-desc').innerText = desc;
+
+            // Profile Summary
+            renderSummary([
+                ["Status", labelOf("a_status", p.status)],
+                ["Goal", labelOf("a_goal", p.goal)],
+                ["Major", p.majorCat === "unsure" ? "미정 → " + major.name_ko : major.name_ko],
+                ["Region", labelOf("a_env", p.env)],
+                ["Budget", labelOf("a_budget", p.budget)],
+                ["English", labelOf("a_english", p.english)]
+            ]);
+
+            // Recommended Major card
+            document.getElementById('rec-major-badge').innerHTML = PGWP_BADGES[pgwp] || "";
+            document.getElementById('rec-major-title').innerText = major.name_ko + (isPostgrad ? " · 포스트그래듀에이트" : " · 디플로마 과정");
+            let majorDesc = (resolved.autoNote ? resolved.autoNote + " " : "");
+            majorDesc += "대표 프로그램은 아래와 같으며, 실제 지원 프로그램은 상담 시 CIP 코드 기준으로 확정합니다.";
+            document.getElementById('rec-major-desc').innerText = majorDesc;
+            document.getElementById('rec-major-programs').innerHTML = major.examples.slice(0, 3).map(e =>
+                `<span class="track-chip"><i class="fa-solid fa-book-open"></i> ${e}</span>`).join('');
+
+            const noteEl = document.getElementById('rec-major-note');
+            if (pgwp === "conditional" && major.caution) {
+                noteEl.innerText = "⚠ 조건부 분야: " + major.caution;
                 noteEl.classList.remove('hidden');
-            } else if (regionCode !== "ANY" && matchedCount === 0) {
-                noteEl.innerText = "※ 선호하신 지역(" + regionLabels[regionCode] + ") 내 프로그램은 상담 시 추가 안내해 드립니다. 아래는 전공 기준 최상위 추천입니다.";
+            } else if (major.caution) {
+                noteEl.innerText = "※ " + major.caution;
                 noteEl.classList.remove('hidden');
             } else {
                 noteEl.classList.add('hidden');
             }
 
-            // Populate Universities
-            const univGrid = document.getElementById('university-grid');
-            let html = '';
-            schools.forEach(school => {
-                const isMatch = regionCode !== "ANY" && school.state === regionCode;
-                html += `
-                    <div class="apple-card flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex items-start justify-between mb-2 gap-2">
-                                <h4 class="sf-display-card-bold text-[#1d1d1f]">${school.name}</h4>
-                                <span class="text-[11px] font-bold text-gray-400 bg-gray-100 rounded-full px-2.5 py-1 whitespace-nowrap mt-1">${school.state}</span>
-                            </div>
-                            ${isMatch ? '<span class="region-badge mb-3"><i class="fa-solid fa-location-dot"></i> 선호 지역 일치</span>' : ''}
-                            <p class="text-xs text-apple-blue font-semibold mb-4 mt-2 uppercase tracking-wider">${school.degree}</p>
-                            <p class="sf-text-caption text-gray-500 mb-6 font-semibold uppercase tracking-wide">${school.rank}</p>
-
-                            <div class="bg-[#fafafc] rounded-[8px] p-4 mb-8 space-y-3">
-                                <div class="flex justify-between sf-text-caption border-b border-gray-100 pb-2">
-                                    <span class="text-gray-500">입학 요건</span>
-                                    <strong class="text-[#1d1d1f] text-right w-1/2">${school.req}</strong>
-                                </div>
-                                <div class="flex justify-between sf-text-caption border-b border-gray-100 pb-2">
-                                    <span class="text-gray-500">영어 요건</span>
-                                    <strong class="text-[#1d1d1f]">IELTS ${school.ielts}</strong>
-                                </div>
-                                <div class="flex justify-between sf-text-caption pt-1">
-                                    <span class="text-gray-500">연간 학비 <span class="text-gray-400">(2026 국제학생)</span></span>
-                                    <strong class="text-[#1d1d1f] text-orange-600">${school.tuition}</strong>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="${school.url}" target="_blank" class="apple-link-pill light-bg w-full text-center mt-auto">
-                            공식 홈페이지 방문 <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-2"></i>
-                        </a>
-                    </div>
-                `;
-            });
-            univGrid.innerHTML = html;
-
-            // Next Steps (학부/석사별)
-            const stepsList = document.getElementById('next-steps-list');
-            if (isMaster) {
-                stepsList.innerHTML = `
-                    <li class="flex items-start"><i class="fa-solid fa-check text-apple-blue mt-1 mr-4"></i> <span><strong>서류 준비:</strong> 영문 학사 졸업·성적 증명서, 이력서(CV), 여권 사본을 준비하십시오. 전공에 따라 학업계획서(SOP)가 요구됩니다.</span></li>
-                    <li class="flex items-start"><i class="fa-solid fa-check text-apple-blue mt-1 mr-4"></i> <span><strong>영어 성적:</strong> 조건부 입학(Conditional Offer)을 먼저 받고 영어 성적을 나중에 제출하는 전략도 가능합니다.</span></li>
-                    <li class="flex items-start"><i class="fa-solid fa-check text-apple-blue mt-1 mr-4"></i> <span><strong>비자 및 정착:</strong> 입학허가서(CoE) 수령 후 학생 비자(Subclass 500)를 신청하고, 졸업 후 졸업생 비자(485) 플랜까지 설계합니다.</span></li>
-                `;
+            // 경고 카드 (PGWP 불가 전공)
+            const warnEl = document.getElementById('rec-warning');
+            if (pgwp === "not_eligible" || pgwp === "mostly_not_eligible") {
+                document.getElementById('rec-warning-text').innerText =
+                    "이 전공의 컬리지 디플로마는 2026년 기준 졸업 후 취업허가(PGWP) 대상이 아닙니다.";
+                document.getElementById('rec-warning-alt').innerText = "대안: " + (major.alternative || "전문가 상담으로 대안 경로를 설계해 드립니다.");
+                const altId = ADJACENT_MAJOR[major.id];
+                const altBtn = document.getElementById('rec-alt-btn');
+                if (altId) {
+                    altBtn.innerHTML = '인접 적격 전공 보기 — ' + MAJORS[altId].name_ko + ' <i class="fa-solid fa-arrow-right text-xs ml-2"></i>';
+                    altBtn.onclick = () => switchMajor(altId);
+                    altBtn.classList.remove('hidden');
+                } else {
+                    altBtn.classList.add('hidden');
+                }
+                warnEl.classList.remove('hidden');
             } else {
-                stepsList.innerHTML = `
-                    <li class="flex items-start"><i class="fa-solid fa-check text-apple-blue mt-1 mr-4"></i> <span><strong>어학 준비:</strong> 지원 전, 또는 조건부 입학(Conditional Offer) 수령 후 필요한 영어 성적을 확보하십시오.</span></li>
-                    <li class="flex items-start"><i class="fa-solid fa-check text-apple-blue mt-1 mr-4"></i> <span><strong>서류 준비:</strong> 영문 고등학교/대학교 졸업 및 성적 증명서, 여권 사본을 준비하십시오.</span></li>
-                    <li class="flex items-start"><i class="fa-solid fa-check text-apple-blue mt-1 mr-4"></i> <span><strong>비자 및 숙소:</strong> 입학허가서(CoE) 수령 후 학생 비자(Subclass 500) 및 숙소를 배정합니다.</span></li>
-                `;
+                warnEl.classList.add('hidden');
             }
 
-            // edm 리소스 링크 (진단 결과와 무관하게 핵심 3개 고정)
-            const majorShort = userProfile.major.split('(')[0].trim();
+            // Pathway Guide
+            renderPathwayGuide(routeKey);
+
+            // 권역 + 컬리지 추천
+            const regionIds = scoreRegions(p, major.id);
+            const noteRegion = document.getElementById('region-note');
+            noteRegion.innerText = "※ 진단 결과, " + regionIds.map(r => REGIONS[r].name_ko).join(" · ") + " 권역을 우선 추천합니다. ("
+                + regionIds.map(r => REGIONS[r].tags[0]).join(" / ") + ")";
+            noteRegion.classList.remove('hidden');
+
+            document.getElementById('university-grid').innerHTML = pickColleges(regionIds, major.id).map(collegeCard).join('');
+
+            renderCommonBlocks(major.name_ko, isPostgrad ? "포스트그래듀에이트" : "디플로마");
+        }
+
+        // ---------- 트랙 B: 대학 편입 ----------
+        function generateTransferReport() {
+            const p = userProfile;
+            const isBC = p.bRegion !== "ontario";
+
+            document.getElementById('result-pathway-title').innerText = "컬리지 → 대학 편입 경로 (2+2)";
+            let desc = isBC
+                ? "BC주는 컬리지 학점이 대학으로 그대로 인정되는 BC 트랜스퍼 시스템이 제도화되어 있습니다. Langara·Douglas 등 편입 특화 컬리지에서 2년을 이수하면 UBC·SFU 등 명문대 3학년 편입에 도전할 수 있습니다."
+                : "온타리오는 Seneca·Humber·Sheridan 등 대학 학위·편입 협정을 갖춘 컬리지가 많습니다. 컬리지 2년 후 토론토대 등으로의 편입 또는 컬리지 학사 과정으로 학위까지 이어갈 수 있습니다.";
+            desc += " 무엇보다 편입·학위 과정은 전공 제한 없이 취업허가(PGWP)가 가능합니다.";
+            if (p.english) desc += "";
+            document.getElementById('result-pathway-desc').innerText = desc;
+
+            renderSummary([
+                ["Status", labelOf("b_status", p.status)],
+                ["Target", labelOf("b_region", p.bRegion)],
+                ["Field", labelOf("b_field", p.bField)],
+                ["Budget", labelOf("b_budget", p.budget)]
+            ]);
+
+            // Major card: 편입 트랙 안내
+            document.getElementById('rec-major-badge').innerHTML =
+                '<span class="region-badge"><i class="fa-solid fa-circle-check"></i> PGWP 가능 (학위 취득 시 전공 제한 없음)</span>';
+            const fieldLabel = labelOf("b_field", p.bField);
+            document.getElementById('rec-major-title').innerText =
+                (p.bField === "undecided" ? "전공 탐색형" : fieldLabel) + " · 대학 편입 트랙";
+            document.getElementById('rec-major-desc').innerText =
+                "컬리지 1~2학년 과정에서 " + (p.bField === "undecided" ? "다양한 교양·기초 과목을 들으며 전공을 정하고" : fieldLabel + " 기초 과목을 이수하고")
+                + ", 성적(GPA)을 관리해 대학 3학년으로 편입하는 경로입니다. 편입 후 학사 학위를 취득하면 전공과 무관하게 취업허가(PGWP)를 받을 수 있습니다.";
+            document.getElementById('rec-major-programs').innerHTML = [
+                "University Transfer (편입 과정)", "Associate Degree (준학사)", "College Bachelor (컬리지 학사)"
+            ].map(e => `<span class="track-chip"><i class="fa-solid fa-book-open"></i> ${e}</span>`).join('');
+            const noteEl = document.getElementById('rec-major-note');
+            noteEl.innerText = "※ 편입·학위 과정은 PGWP 전공 제한을 받지 않습니다. 편입 인정 학점·요건은 대학과 전공에 따라 다릅니다.";
+            noteEl.classList.remove('hidden');
+            document.getElementById('rec-warning').classList.add('hidden');
+
+            renderPathwayGuide("transfer");
+
+            const noteRegion = document.getElementById('region-note');
+            noteRegion.innerText = isBC
+                ? "※ BC 트랜스퍼 시스템 기반의 편입 특화 컬리지를 추천합니다. UBC·SFU 인접 통학권 중심입니다."
+                : "※ 온타리오의 학위·편입 협정 중심 컬리지를 추천합니다. 토론토 광역권 중심입니다.";
+            noteRegion.classList.remove('hidden');
+
+            document.getElementById('university-grid').innerHTML = pickTransferColleges(p).map(collegeCard).join('');
+
+            renderCommonBlocks("대학 편입", "편입");
+        }
+
+        // ---------- 공통 블록 (Resource Center / Next Steps) ----------
+        function renderCommonBlocks(majorShort, routeShort) {
             document.getElementById('board-section-title').innerText =
-                majorShort + (isMaster ? " 석사" : " 학부") + " 진학, 다음 단계로 이어가세요";
+                majorShort + " " + routeShort + " 진학, 다음 단계로 이어가세요";
             const edmLinks = [
-                { url: "https://www.edmuhak.com/university-abroad/austrailia/uni-guide-australia", icon: "fa-regular fa-file-lines", title: "호주 대학유학 가이드 | 입학·비용·비자 총정리" },
-                { url: "https://www.edmuhak.com/review", icon: "fa-regular fa-comment-dots", title: "edm 유학 후기 | 합격생들의 생생한 이야기" },
-                { url: "https://www.edmuhak.com/edm/branches/bsmgc", icon: "fa-solid fa-location-dot", title: "호주 글로벌센터 | 브리즈번·시드니·멜버른 현지 케어" }
+                { url: BRAND_CONFIG.guideUrl, icon: "fa-regular fa-file-lines", title: "캐나다 대학유학 가이드 | 입학·비용·Co-op·PGWP 총정리" },
+                { url: BRAND_CONFIG.reviewUrl, icon: "fa-regular fa-comment-dots", title: "edm 유학 후기 | 합격생들의 생생한 이야기" },
+                { url: BRAND_CONFIG.consultUrl, icon: "fa-solid fa-location-dot", title: "1:1 무료 상담 | 전공별 PGWP 적격 여부 확인" }
             ];
             document.getElementById('board-articles').innerHTML = edmLinks.map(a => `
                 <a href="${a.url}" target="_blank"
@@ -1123,70 +1378,38 @@
                 </a>
             `).join('');
 
-            // 결과 공유용 해시 갱신 (주소창 URL 자체가 공유 링크가 된다)
-            history.replaceState(null, '', '#r=' + encodeProfile(userProfile));
+            document.getElementById('next-steps-list').innerHTML = `
+                <li class="flex items-start"><i class="fa-solid fa-check text-apple-blue mt-1 mr-4"></i> <span><strong>프로그램 확정:</strong> 관심 전공의 PGWP 적격 여부를 프로그램 단위(CIP 코드)로 확인하고 지원 프로그램을 확정합니다.</span></li>
+                <li class="flex items-start"><i class="fa-solid fa-check text-apple-blue mt-1 mr-4"></i> <span><strong>서류·영어 준비:</strong> 영문 졸업·성적 증명서와 IELTS 등 공인 영어 성적을 준비합니다. 조건부 입학(Conditional Offer) 전략도 활용할 수 있습니다.</span></li>
+                <li class="flex items-start"><i class="fa-solid fa-check text-apple-blue mt-1 mr-4"></i> <span><strong>학업허가 신청:</strong> 입학허가서(LOA)와 주정부 승인서(PAL)를 갖춰 학업허가(Study Permit)를 신청하고, 졸업 후 PGWP 플랜까지 설계합니다.</span></li>
+            `;
         }
 
         // ============================================================
         // 결과 링크 공유 / 복원
-        // 프로필을 짧은 ASCII 코드로 압축한다 (예: #r=B-Q-I1-2-N-1)
+        // 트랙 + 답변 인덱스를 짧은 코드로 압축 (예: #r=A-0-1-3-0-2-1)
         // ============================================================
-        const MAJOR_CODES = {
-            "간호학과 (Nursing)": "N",
-            "약학/약대 (Pharmacy)": "P",
-            "IT 및 사이버보안 (IT/Cyber Security)": "I",
-            "공학/엔지니어링 (Engineering)": "E",
-            "의대/의전원 (Medicine)": "M",
-            "호텔경영학 (Hospitality)": "H"
-        };
-        const REGION_CODES = { "NSW": "N", "VIC": "V", "QLD": "Q", "OTHER": "O", "ANY": "A" };
-        const ENG_STEPS = { "I": "eng_score_ielts", "P": "eng_score_pte", "T": "eng_score_toefl" };
-
         function encodeProfile(p) {
-            const deg = p.degree.includes("석사") ? "M" : "B";
-            const reg = REGION_CODES[p.regionCode] || "A";
-
-            let eng = "X"; // 준비 전
-            for (const code in ENG_STEPS) {
-                const idx = questionFlow[ENG_STEPS[code]].options.findIndex(o => o.label === p.english);
-                if (idx >= 0) { eng = code + idx; break; }
-            }
-
-            const gradesStep = deg === "M" ? "grades_master" : "grades";
-            const gr = questionFlow[gradesStep].options.findIndex(o => o.label === p.grades);
-            const maj = MAJOR_CODES[p.major] || "";
-            const tg = questionFlow.target.options.findIndex(o => o.label === p.target);
-
-            return [deg, reg, eng, gr < 0 ? 0 : gr, maj, tg < 0 ? 0 : tg].join("-");
+            const flow = flows[p.track];
+            const idx = flow.steps.map(sid => {
+                const q = questionFlow[sid];
+                const i = q.options.findIndex(o => o.val === p[q.key]);
+                return i < 0 ? 0 : i;
+            });
+            return (p.track === "transfer" ? "B" : "A") + "-" + idx.join("-");
         }
 
         function decodeProfile(code) {
             const parts = code.split("-");
-            const isMaster = parts[0] === "M";
-            const p = { degree: isMaster ? "석사 (Master)" : "학부 (Bachelor)", region: "", regionCode: "ANY", english: "", grades: "", major: "", target: "" };
-
-            p.regionCode = Object.keys(REGION_CODES).find(k => REGION_CODES[k] === parts[1]) || "ANY";
-            const regOpt = questionFlow.region.options.find(o => o.val === p.regionCode);
-            p.region = regOpt ? regOpt.label : "상관없음 (최적의 학교 위주로 추천)";
-
-            const eng = parts[2] || "X";
-            if (eng === "X") {
-                p.english = "준비 전 (성적 없음)";
-            } else {
-                const step = questionFlow[ENG_STEPS[eng[0]]];
-                const opt = step && step.options[parseInt(eng.slice(1), 10)];
-                p.english = opt ? opt.label : "준비 전 (성적 없음)";
-            }
-
-            const gradesStep = isMaster ? "grades_master" : "grades";
-            const gOpt = questionFlow[gradesStep].options[parseInt(parts[3], 10)];
-            if (gOpt) p.grades = gOpt.label;
-
-            p.major = Object.keys(MAJOR_CODES).find(k => MAJOR_CODES[k] === parts[4]) || "";
-
-            const tOpt = questionFlow.target.options[parseInt(parts[5], 10)];
-            if (tOpt) p.target = tOpt.label;
-
+            const track = parts[0] === "B" ? "transfer" : "career";
+            const p = emptyProfile(track);
+            const steps = flows[track].steps;
+            if (parts.length - 1 < steps.length) return null;
+            steps.forEach((sid, i) => {
+                const q = questionFlow[sid];
+                const opt = q.options[parseInt(parts[i + 1], 10)];
+                if (opt) p[q.key] = opt.val;
+            });
             return p;
         }
 
@@ -1226,27 +1449,23 @@
         }
 
         // 공유 링크로 접속 시 결과 페이지 즉시 복원
-        // #r= 단축 코드, #p= 는 이전에 공유된 JSON 링크 호환용
         (function restoreFromHash() {
             const hash = location.hash;
             try {
-                let data = null;
-                if (hash.startsWith('#r=')) {
-                    data = decodeProfile(hash.slice(3));
-                } else if (hash.startsWith('#p=')) {
-                    data = JSON.parse(decodeURIComponent(hash.slice(3)));
-                } else {
-                    return;
-                }
-                if (!data || !data.major || !majorData[data.major]) return;
-                userProfile = Object.assign(userProfile, data);
+                if (!hash.startsWith('#r=')) return;
+                const data = decodeProfile(hash.slice(3));
+                if (!data) return;
+                // 필수 답변 검증
+                if (data.track === "career" && (!data.status || !data.majorCat)) return;
+                if (data.track === "transfer" && (!data.status || !data.bRegion)) return;
+                userProfile = data;
                 document.addEventListener('DOMContentLoaded', generateReport);
             } catch (e) { /* 잘못된 링크는 무시하고 히어로 표시 */ }
         })();
 
         // 페이지에 머문 상태로 다른 결과 링크를 열면 새 결과로 갱신
         window.addEventListener('hashchange', () => {
-            if (location.hash.startsWith('#r=') || location.hash.startsWith('#p=')) location.reload();
+            if (location.hash.startsWith('#r=')) location.reload();
         });
     </script>
 </body>
