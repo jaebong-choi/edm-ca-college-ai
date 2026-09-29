@@ -1093,7 +1093,6 @@
             highschool:    { id: "WPHw0EeUEEw", t: "캐나다 고등학교, 한국과 뭐가 다를까? | 조기유학 솔직 후기" },
             cityCompare:   { id: "Xp8CPFg6vww", t: "캐나다 조기유학 도시 찾기 | 토론토 vs 밴쿠버 비교" },
             publicManaged: { id: "UBrAULpd2O0", t: "[캐나다 조기유학] 부모가 공부하면 자녀 학비 무료? 공립 무상교육 장단점" },
-            langVancouver: { id: "6Rp_R04361k", t: "캐나다 어학연수 ILAC 밴쿠버·기숙사 투어 | 소그룹 수업" },
             langCost:      { id: "b3Y2U2WPdaI", t: "캐나다 어학연수 비용? 학비·생활비·숙소비·절약 팁 2분 요약" }
         };
 
@@ -1156,12 +1155,12 @@
             }
             if (track === "transfer") {
                 const list = [V.senecaPathway, V.careerMajors, (p.bField === "arts" ? V.sheridan : V.cityCompare)];
-                if (noEng) return [V.senecaPathway, V.langVancouver, V.careerMajors];
+                if (noEng) return [V.senecaPathway, V.langCost, V.careerMajors];
                 return list;
             }
             // career
             const list = [V.careerMajors, V.senecaPathway, V.workingHoliday];
-            if (noEng) return [V.careerMajors, V.senecaPathway, V.langVancouver];
+            if (noEng) return [V.careerMajors, V.senecaPathway, V.langCost];
             return list;
         }
 
